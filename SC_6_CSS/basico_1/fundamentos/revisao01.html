@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <style type="text/css">
+        h2{
+            color:blue;
+        }
+        #conteudo{
+            border:5px solid blueviolet;
+            background:rgb(67, 179, 127);
+            background-image: url('imagens/background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 100%;
+            
+        }
+        #nr2{
+            color:red;
+            border: 15px double yellowgreen;
+        }
+        #primeiro{
+            background-color: aquamarine;
+        }
+        #tpfonte{
+            font-size: 2em;
+        }
+        .classe3{
+            color:aqua;
+            border: 10px outset gray
+
+        }
+        .diferente{
+            color: blue;
+            font-size: larger;
+            background-color: yellow;
+            border:1px dotted black;
+        }
+        .fontes{
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 1.2em;
+            
+        }
+        .cores{
+            color:rgb(97, 13, 13)
+
+        }
+
+    </style>
+</head>
+<body id="conteudo">
+    <h1>Texto</h1> 
+    <h1 style="color:blue; background-color: green;">Texto</h1>
+    <p style="font-style: italic; font-weight: 600px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         At est consequuntur beatae ex? Asperiores quaerat eveniet labore
+          perspiciatis iste ea libero tempore officia illo voluptas, voluptatem maiores sit itaque aspernatur.</p> 
+    
+    <p style="color: red; font-style: italic; font-size:1.2em;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         At est consequuntur beatae ex? Asperiores quaerat eveniet labore
+          perspiciatis iste ea libero tempore officia illo voluptas, voluptatem maiores sit itaque aspernatur.</p> 
+
+    <h2>Seletor CSS</h2>
+    <h2>Seletor CSS</h2>
+    <h2 id="nr2">ID 2</h2>
+    <h2>ID 2</h2>
+    <h3 class="classe3">Classe 3</h3>
+    <h3 class="classe3">Classe 3</h3>
+    <div id="primeiro">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dolore ipsam delectus quidem officia veniam incidunt quos error perferendis, ea, pariatur ut veritatis doloremque sapiente. Assumenda architecto veritatis dolor quidem?
+        </p>
+        <p> Lorem ipsum <span class="diferente">dolor</span> sit amet consectetur adipisicing elit. Rem vero deleniti repellendus repudiandae assumenda accusantium mollitia tempore impedit facere delectus odit unde harum voluptatem, commodi eligendi asperiores quasi quia animi.</p>
+    </div>
+    <div style="border: 1px solid red">
+        <div>Produto 1</div>
+        <div>Produto 2</div>
+        <div>Produto 3</div>
+    </div>
+
+    <div> Fontes
+        <div class="fontes">Fontes</div>
+        <div class="cores">Cores</div>
+    </div>
+    <div> <span style="font-weight: bolder;">Tipo</span>  de fonte em tamanho, sendo o padrão <span id="tpfonte"> 16px</span></div>
+    
+    
+</body>
+</html>
