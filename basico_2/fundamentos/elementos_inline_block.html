@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Inline Block</title>
+    <style>
+        .borda{
+            border:1px solid red;
+            /* display:inline; */
+            /* display:block; */
+            /* Fica um ao lado do outro, enquanto cabe na mesma linha */
+            display:inline-block
+        }
+        .borda1{
+            border:1px solid red;
+        }
+        .borda2{
+            border:1px solid red;
+            display:inline;
+        }
+        /* Quando não couber na linha quebra para a próxima. */
+        .borda3{
+            border:1px solid red;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <span class="borda">inline 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nobis nostrum voluptatum amet molestias eveniet facere libero asperiores quae ullam unde temporibus ea dicta, laboriosam velit voluptate cumque, totam saepe!</span>
+    <span class="borda">inline 2</span>
+    <!-- <div class="borda">Bloco 1</div>
+    <div class="borda">Bloco 2</div> -->
+    <h1 class="borda1">Bloco 1</h1>
+    <h1 class="borda2">Bloco 2</h1>
+    <h1 class="borda2">Bloco 3</h1>
+    <br>
+    <hr>
+    <br>
+    
+    <h1 class="borda3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolorem magnam corporis, natus sit inventore veritatis saepe. Laborum asperiores ipsam porro aliquam. Inventore, unde architecto deserunt doloremque quam blanditiis autem.</h1>
+    <h1 class="borda3">Bloco 5</h1>
+
+    
+</body>
+</html>
