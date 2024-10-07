@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -76,3 +77,83 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/CSS" href="estilo.css">
+    <title>Elementos Flutuantes</title>
+    <style type="text/css">
+        #principal{
+            border:1px solid red; 
+            background-color: greenyellow;
+        }
+        .conteudo{
+            background: blue;
+            border:1px solid grey;
+            width: 150px;
+            height: 150px;
+            margin:10px;
+            float:left;
+        }
+        .conteudo1{
+            background: red;
+            border:1px solid gray;
+            width: 200px;
+            height: 200px;
+            margin:10px;
+            float: right;
+        }         
+        .conteudo2{
+            background: yellow;
+            border:1px solid gray;
+            width: 200px;
+            height: 200px;
+            margin:10px;
+             float: left; 
+        }    
+        /* Limpar o Fluxo Flutuante */
+        /* left, right, both, none */
+        .clear{
+            clear:left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="principal">
+        <div class="conteudo">
+            Conteúdo 1
+        </div>
+        <div class="conteudo">
+            Conteúdo 2
+        </div>
+        <div class="conteudo">
+            Conteúdo 3
+        </div>
+        <!-- <div class="clear"></div> -->
+         <!-- Limpa o fluxo e permite expandir a caixa, aplicando o fundo -->
+        <p class="clear">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat alias, quos amet corporis dicta nesciunt doloribus saepe dignissimos rem maiores totam error labore corrupti minima? Distinctio obcaecati exercitationem est fugiat.</p>
+    </div>
+    <div class="conteudo1">
+        Conteúdo 1
+    </div>
+    <div class="conteudo1">
+        Conteúdo 2
+    </div>
+    <div class="conteudo1">
+        Conteúdo 3
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat alias, quos amet corporis dicta
+        nesciunt doloribus saepe dignissimos rem maiores totam error labore corrupti minima? Distinctio obcaecati
+        exercitationem est fugiat.</p>
+    <p class="clear" style="color:blue">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore pariatur tempora consectetur. Aut eveniet quam voluptas laboriosam quia, maxime quibusdam saepe commodi? Odit expedita deleniti sunt a, eveniet quas.
+    </p>
+</body>
+
+</html>
+>>>>>>> 61e5678d7ba9ea2ff30dcbdf212d9f42764d7b04

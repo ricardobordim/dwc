@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Limpar a formatação padrão */
 * {
     margin:0;
@@ -7,3 +8,14 @@ body{
     font-size:1em;
     font-family:
 }
+=======
+/* Limpar a formatação padrão */
+* {
+    margin:0;
+    padding:0;
+}
+body{
+    font-size:1em;
+    font-family:
+}
+>>>>>>> 61e5678d7ba9ea2ff30dcbdf212d9f42764d7b04
