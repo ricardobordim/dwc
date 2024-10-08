@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Seletores</title>
+    <style type="text/css">
+        /* .verde {
+            color:green;
+        } */
+        #cabecalho{
+            border: 1px solid green;
+        }
+        p.verde{
+            color:green;
+        }
+        /* Links filhos diretos */
+        li>a{
+            color:red;
+            text-decoration: none;
+        }
+        /* Seletores descendentes */
+        p a{
+            color:yellowgreen;
+        }
+        /* seletores de irmãos adjacentes */
+        h1+p{
+            color:red;
+        }
+        /* seletores de irmãos gerais */
+        h3~p{
+            background: blue;
+        }
+    </style>
+</head>
+<body id="cabecalho">
+    <h1>Texto</h1>
+    <h2 class="verde"> texto 2
+
+    </h2>
+    <p class="verde">oliver</p>  
+    <ul>
+        <li> <span><a href="">Home</a></span>
+            
+        </li>
+        <li>
+            <a href="">Sobre</a>
+        </li>
+    </ul>
+    <a href="">Teste</a> <br>
+    <p> <a href="">Teste de Descendentes</a></p>
+    <p> <a href="">Teste de Descendentes</a></p>
+    <p> <a href="">Teste de Descendentes</a></p>
+    <a href="">Teste</a> <br>
+    <p>Teste de irmão adjacentes posteriores</p>
+    <h1>irmão Posterior</h1>
+    <p>adjacente 1</p>
+    <p>adjacente 2</p>
+    <h3>Irmãos Posteriores geral</h3>
+    <p>adjacente 1</p>
+    <p>adjacente 2</p>
+    <h1>Irmão Posterior</h1>
+    <p>adjacente 1</p>
+</body>
+</html>

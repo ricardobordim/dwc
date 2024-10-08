@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Layouts</title>
+    <style type="text/css">
+        body{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: #f2f2f2;    
+                        
+        }
+        #container{
+            /* width:720px; */
+
+            width: 920px;
+            margin:0 auto;
+            background: #fff url("imagens/coluna.png") repeat-y left top;
+            min-width: 720px;
+            max-width: 1280px;
+        }
+        #marca{
+            width: 100%;
+            height: 200px;
+            background: #225992 url("imagens/cabecalho2.jpg") no-repeat center;
+            text-align: center;
+            line-height: 200px;
+        }
+        #conteudo{
+            /* width: 520px; */
+            width: 75%;
+            float:right;
+        }
+        #conteudo_principal{
+            margin-right: 10px;
+            /* width: 320px; */
+            width: 63%;
+            float:left;
+        }
+        #conteudo_secundario{
+            /* width: 180px; */
+            width:34%;
+            float: right;
+            background: #d1d1d1;
+        }   
+        #conteudo_secundario h1, 
+        #conteudo_secundario h2,
+        #conteudo_secundario h3,
+        #conteudo_secundario p {
+            padding-left: 20px;
+            padding-right: 20px;     
+        }
+        #navegacao{
+            /* width: 180px; */
+            width: 23%;
+            float:left;
+            padding-top:20px;
+            padding-bottom: 20px;
+            /* background: #d1d1d1; */
+            font-style: italic;
+    
+            
+        }
+        #navegacao ul{
+            list-style: none;
+            font-weight: bolder;
+            
+        }
+
+        #navegacao li a{
+            text-decoration: none;
+
+        }
+        #rodape{
+            clear:both;
+            background:#c4c4c4;
+            padding:5px
+        }
+        /* #imagem{
+            width:90%;
+            Corta parte da imagem
+            overflow: hidden;
+            border: 1px solid red;
+        } */
+        img.img_noticia{
+            /* Lembrando que a Imagem é 96+2 (direita) +2 (esquerda) =100 */
+            width: 96%;
+            padding: 2%;
+            /* Depende do tamanho real da imagem  */
+            max-width: 600px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="container">
+        <div id="marca">
+            <strong>Marca</strong>
+        </div>
+        <div id="conteudo">
+            <div id="conteudo_principal">
+                <h2>Conteúdo Principal</h2>
+                
+                <img class= "img_noticia" src="imagens/natureza.jpg">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odio doloribus fuga dolor officia in. Perspiciatis
+                    magnam vitae dicta non. Qui excepturi recusandae adipisci quas molestias neque ad et labore!</p>
+                <h2>Conteúdo Principal II</h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odio doloribus fuga dolor officia in. Perspiciatis
+                    magnam vitae dicta non. Qui excepturi recusandae adipisci quas molestias neque ad et labore!</p>
+            </div>
+            <div id="conteudo_secundario">
+                <h2>Conteúdo Secundário</h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odio doloribus fuga dolor officia in. Perspiciatis
+                    magnam vitae dicta non. Qui excepturi recusandae adipisci quas molestias neque ad et labore!</p>
+
+            </div>
+        </div>
+        <div id="navegacao">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div id="rodape"><strong>Rodapé</strong></div>
+    </div>
+
+    
+</body>
+</html>

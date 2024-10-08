@@ -1,0 +1,24 @@
+/* testar para ver se herda */
+/* *{ border: 1px solid blue;} */
+body{
+    color:red;
+    /* border e background não são herdados */
+    border: 1px double blue;
+    background-color: grey;
+}
+
+/* !important serve para dizer quem é o primeiro, mas como regra quem vale é o último */
+/* Seletores mais específicos sobrepõe os anteriores */
+p{
+    color:blue !important;
+}
+p {
+    color:red;
+}
+
+h2.verde{
+    color:green;
+}
+h2#amarelo{
+    color:yellow;
+}

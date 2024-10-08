@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Chalé - Hotel</title>
+    <style type="text/CSS">
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: #fff url("imagens/bg.png");
+            margin: 15px;
+        }
+        #container{
+            background: #ede9cc url("imagens/bg-container.png") top center repeat-y;
+            margin:0 auto;
+            min-width: 740px;
+            max-width: 1180px;
+        }
+        #topo{
+            position: relative;
+            background: #dbcd87;
+            height: 15.4em;
+            min-height: 250px;
+        }
+        #area_logo{
+            position: absolute;
+            background: url("imagens/topo-imagem-principal2.png") no-repeat;
+            width: 100%;
+            height: 250px;
+            top:0;
+            left:0;
+            z-index:1;
+        }
+       .logo a{
+            position: absolute;
+            top:15px;
+            left:15px;
+            z-index:3;
+            background: url(/imagens/logo.png) no-repeat;
+            width: 151px;
+            height: 66px;
+            text-indent: -9000px;
+
+
+        }
+        #area_menu{
+            position: absolute;
+            background:url(imagens/topo-imagem-lateral.png) no-repeat;
+            width: 450px;
+            height: 250px;
+            top:0;
+            right:0;
+            z-index:1;
+        }
+        #conteudo_menu{
+            margin-left:90px;
+            margin-right: 15px;
+            padding-top: 15px;
+            /* padding-left: 60px;; */
+        }
+        #menu_locais{
+            border-bottom: 1px solid #b5ab56;
+            border-top: 1px solid #b5ab56;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 0.7em;
+            color: #8b8448;
+
+        }
+         #menu_locais .locais{
+            float:left;
+            line-height: 2.1em;
+        }
+        a{
+            text-decoration: none;
+        }
+        a.reserva{
+            text-transform: uppercase;
+            background: #a29750;
+            color:#fff5b0;
+            padding:5px 10px;
+            float: right;;
+        }
+        #menu{
+            margin-top: 15px;
+        }
+        .depoimento{
+            width: 226px;
+            height: 164px;
+            float:right;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul#navegacao{
+            float: left;
+        }
+        ul#navegacao a{
+            text-transform: uppercase;
+            font-size: 0.8em;
+            padding: 5px;
+            color:#6e672c;
+            line-height: 30px;
+        }
+        ul#navegacao a:hover{
+            background: #ebbefd;
+        }
+        #principal{
+            float:left;
+            width: 50%;
+            background: url("imagens/bg-area-principal.png") top left repeat-x;
+            padding: 15px 0;
+        }
+        #area_lateral{
+            float: right;
+            width: 50%;
+            background: url("imagens/bg-area-lateral.png") top left repeat-x;
+            padding: 20px 0px;
+        }
+        .conteudo{
+            margin: 0 auto;
+            width: 90%;
+        }
+        .conteudo h2{
+            padding:5px;
+            color:#7d7640;
+            font-size: 1.1em;
+        }
+        .conteudo p{
+            font-size: 1em;
+            margin-bottom: 10x;
+        }
+        #rodape{
+            clear: both;
+            text-align: center;
+            margin: 0 auto;
+            padding: 16px;
+            background: #fff url(imagens/bg-rodape.png) repeat-x top;
+            color:#7d7640;
+        }
+        #beneficios li{
+            padding: 8px;
+            border-bottom: 1px solid #f3efcb;
+            height: 6em;
+        }
+        #beneficios li a img{
+            float: left;
+            margin-right: 8px;
+
+        }
+        #beneficios li a p {
+            color:#000;
+            font-size: 0.8em;
+        }
+        #beneficios li a h3{
+            font-size: 1.1em;
+            color: #615b2d;
+            padding: 5px 0;
+            background: url("imagens/ornamento.png") no-repeat center right;
+        }
+        #beneficios li:hover{
+            background-color: #f6f3d6;
+            cursor: pointer;
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="topo">
+            <div id="area_logo">
+                <h1 class="logo">
+                    <a href="">Chalé Hotel</a>
+                </h1>
+            </div>
+            <div id="area_menu">
+                <div id="conteudo_menu">
+                   <div id="menu_locais" >
+                        <span class="locais"> Rio de Janeiro - São Paulo - Belo Horizonte</span>
+                        <a class="reserva" href="">Reservar</a>
+                        <div style="clear:both;"></div>
+                   </div>
+                   <div id="menu">
+                       <ul id="navegacao">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">História</a></li>
+                        <li><a href="">Imprensa</a></li>
+                        <li><a href="">Gastronomia</a></li>
+                        <li><a href="">Contato</a></li>
+                       </ul>
+                       <img class="depoimento" src="imagens/depoimento.png" alt="">
+                   </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="principal">
+            <div class="conteudo">
+                <h2>Lorem ipsum dolor sit amet </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis impedit totam pariatur voluptatibus reprehenderit eos nam officiis minima expedita aliquam ipsa harum, nemo cum, eum veniam sapiente esse quisquam perferendis?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus molestiae repudiandae exercitationem provident quae dignissimos sed doloremque ea nulla at officia, cum magni, nam, repellendus natus ullam quod ex necessitatibus?</p>
+            </div>
+        </div>
+        <div id="area_lateral">
+            <div class="conteudo">
+                <ul id="beneficios">
+                    <li>
+                        <a href="">
+                            <img src="imagens/apartamento.jpg" width="150px" alt="apartamento">
+                            <h3> Apartamento</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis odio sit distinctio recusandae nulla tempore.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="imagens/restaurante.jpg" width="150px" alt="restaurante">
+                            <h3> Restaurante</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis odio sit distinctio recusandae
+                                nulla tempore.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="imagens/piscina.jpg" width="150px" alt="piscina">
+                            <h3> Piscina</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis odio sit distinctio recusandae
+                                nulla tempore.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="rodape">
+            <span>&copy; Copyrigth 2000-2024 Chalé Hotel</span>
+        </div>
+
+
+    </div>
+</body>
+</html>

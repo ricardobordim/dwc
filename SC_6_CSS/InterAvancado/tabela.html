@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Estilizando Tabelas</title>
+    <style type="text/css">
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        table{
+            width: 600px;
+            /* separate, collapse */
+            border-collapse: collapse;
+        }
+        th,td{
+            /* border:1px solid red; */
+            padding: 7px;
+
+        }
+        th{
+            text-transform: uppercase;
+            border-top: 1px solid #999;
+            border-bottom: 2px solid #777;
+            text-align: left;
+            font-size: 90%;
+            letter-spacing: 0.1em;
+        }
+        tr.alternado{
+        
+            background-color: #efefef;
+        }
+        tr:hover{
+            background-color: #c5e6c5;
+        }
+        .numero{
+            text-align: right;
+        }
+        
+    </style>
+
+
+</head>
+<body>
+    <h2>Estilizando Tabelas</h2>
+    <table>
+        <tr>
+            <th>CÓDIGO </th>
+            <th>Produto</th>
+            <th>PREÇO</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Notebook</td>
+            <td class="numero">R$ 2.500,00</td>
+        </tr>
+        <tr class="alternado">
+            <td>002</td>
+            <td>Celular</td>
+            <td class="numero">R$ 1.500,00</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Tablet</td>
+            <td class="numero">R$ 2.500,00</td>
+        </tr>
+        <tr class="alternado">
+            <td>004</td>
+            <td>Nexus</td>
+            <td class="numero">R$ 2.500,00</td>
+        </tr>
+
+    </table>
+
+  
+</body>
+</html>

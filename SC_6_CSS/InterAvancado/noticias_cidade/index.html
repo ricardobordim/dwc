@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Cidade - Seu site de Notícias</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background: #fff url("imagens/fundo.png") repeat-x left top;
+    }
+    #container{
+        width: 750px;
+        margin:0 auto;
+        border: 1px solid red;
+    }
+    #topo{
+        height: 150px;
+        border: 1px solid red;
+        background: url("imagens/detalhe-topo.png") no-repeat right top;
+        padding-top: 25px;
+    }
+    .logo{
+        width:152px;
+        height: 66px;
+        background: url("imagens/logo.png") no-repeat center;
+        /* Esquema para leitores de sites */
+        text-indent: -3000px;
+    }
+    ul{
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+   #topo ul{
+        margin-top: 30px;
+        background: #b10333;
+        float:left;
+    }
+
+    #topo ul li{
+        float:left;
+    }
+
+    #topo ul li a{
+        font-size: 0.9 em;
+        display: block;
+        padding: 0.5em 1.5em;
+        line-height: 2.1em;
+        text-decoration: none;
+        color: #fff;
+        background: url("imagens/divisor.png") repeat-y left center;
+    }
+    #topo ul .primeiro a{
+        background: none;;
+    }
+    #topo ul a:hover{
+        color:#69001d;
+    }
+    body.home #navegacao a#home,
+    body.brasil #navegacao a#brasil,
+    body.internacional #navegacao a#internacional,
+    body.fotos #navegacao a#fotos{
+        color:#fff;
+        background: #de003d;
+        cursor:text;
+    }
+    #conteudo{
+        background: #f5f5f5;
+        margin-top: 60px;
+    }
+    #lateral{
+        border: 1px solid red;
+        width: 180px;
+        float:left;
+        margin: 0 0 20px -750px;
+    }
+    #primario{
+        width: 270px;
+        float:left;
+        margin: 0 0 20px 195px;
+    }
+    #secundario{
+        width: 270px;
+        float:left;
+        margin: 0 0 20px  15px;
+    }
+
+    #container_rodape{
+        clear: both;
+        background: #294c71;
+        padding:20px;
+    }
+    #rodape{
+        text-align: center;
+        width: 750px;
+        margin:0 auto;
+        color:#fff;
+    }
+    .caixa{
+        margin: 10px 0;
+        padding: 5px;
+        background: #f3f3f3 url("imagens/fundo-caixa.png");
+    }
+    h2{
+        padding:5px;
+        font-size: 1em;
+        background-color: #294c71;
+        color:#fff;
+    }
+    .caixa_conteudo{
+        background: #fff;
+        padding:5px;
+        margin-top: 5px;
+        
+    }
+    #lateral ul a{
+        font-size: 0.9em;
+        text-decoration: none;
+        color: #000;
+        padding: 3px;
+        display: block;
+        line-height: 30px;
+        border-bottom: 1px solid #f3f3f3;
+    }
+    #lateral ul a:hover{
+        color:#a1a1a1;
+        background: #f9f9f9 url("imagens/marcador.png") no-repeat left center;
+        padding-left: 20px;
+    }
+    label{
+        display: block;
+        cursor:pointer;
+    }
+    input{
+        padding:5px;
+        font-size: 0.9em;
+        background-color: #fff;
+        width: 125px;
+    }
+    input.submit{
+        width: 80px;
+        background-color: #b10333;
+        border:2px solid #870529;
+        color:#fff;
+    }
+
+    /* Formatando Imagens */
+
+    img.imagem_principal{
+        width: 98%;
+        border:3px solid #dfdfdf;
+    }
+
+    /* Formatando cabeçalhos */
+    h3{
+        text-transform: uppercase;
+        display: inline;
+        font-size:0.8em;
+        padding:3px;
+    }
+    .destaque h3{
+        background: #b10333;
+        color:#fff;
+    }
+    .entrevista h3{
+        background: #de003e;
+    }
+    #lista_noticias li{
+        padding-left: 2px ;
+        border-bottom: 1px solid #ccc;
+        height: 65px;
+    }
+    #lista_noticias li a img{
+        float: left;
+        margin: 5px;
+    }
+    #lista_noticias li a{
+        text-decoration: none;
+    }
+    #lista_noticias li a h3{
+        font-size: 0.8em;
+        padding: 0;
+        color:blueviolet
+    }
+    #lista_noticias li a p{
+        font-size: 0.7em;
+        color:#000;
+    }
+    #lista_noticias li:hover{
+        background-color: #eee;
+        cursor:pointer;
+    }
+    a:link, a:visited{
+        color:#b10333;
+        padding:2px;
+    }
+    </style>
+</head>
+<body class="home">
+    <div id="container">
+        <div id="topo">
+            <h1 class="logo">Notícias Cidade</h1>
+            <ul id="navegacao">
+                <li class="primeiro" > <a id="home" href="index.html">Home</a> </li>
+                <li> <a id="brasil" href="brasil.html">Brasil</a> </li>
+                <li> <a id="internacional" href="internacional.html">Internacional</a> </li>
+                <li> <a id="economia" href="economia.html">Economia</a> </li>
+                <li> <a id="saude" href="saude.html">Saúde</a> </li>
+                <li> <a id="ciencia" href="ciencia.html">Ciências</a> </li>
+                <li> <a id="fotos" href="fotos.html">Fotos</a> </li>
+            </ul>
+        </div>
+        <div id="conteudo">
+            <div id="primario">
+                <div class="caixa destaque" >
+                   <h2>Destaque</h2>
+                    <div class="caixa_conteudo">
+                        <h3> Nova Legislação</h3>
+                        <img class= "imagem_principal" src="imagens/taxi.jpg" alt="" width="100%">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde neque adipisci quis, dicta id illo vel accusantium dolorum rerum esse reiciendis nulla ipsam, sint deleniti reprehenderit. Excepturi, aut consequatur. </p>
+                        <a href="">Leia Mais</a>
+                    </div>
+                </div> 
+                <div class="caixa">
+                    <h2>Mundo</h2>
+                    <div class="caixa_conteudo">
+                        <ul id="lista_noticias">
+                            <li>
+                                <a href=""><img src="imagens/tecnologia.jpg" alt="" width="80">
+                                    <h3>Novas Tecnologias</h3>
+                                     <p>Lorem ipsum dolor sit amet.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""><img src="imagens/tecnologia.jpg" alt="" width="80">
+                                    <h3>Novas Tecnologias</h3>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""><img src="imagens/tecnologia.jpg" alt="" width="80">
+                                    <h3>Novas Tecnologias</h3>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="secundario">
+                <div class="caixa entrevista">
+                    <h2>Última Entrevista</h2>
+                    <div class="caixa_conteudo">
+                        <h3>Entrevista com Felipe Sila</h3>
+                        <img class="imagem_principal" src="imagens/doutor.jpg" alt="" width="100%">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias unde neque adipisci quis, dicta id illo vel
+                            accusantium dolorum rerum esse reiciendis nulla ipsam, sint deleniti reprehenderit. Excepturi, aut
+                            consequatur. </p>
+                        <a href="">Leia Mais</a>
+                    </div>
+                </div>
+                    <div class="caixa">
+                        <h2>Notícias Recentes</h2>
+                        <div class="caixa_conteudo">
+                            <ul id="lista_noticias">
+                                <li>
+                                    <a href=""><img src="imagens/doutor.jpg" alt="" width="80">
+                                        <h3>Novas Tecnologias</h3>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imagens/tecnologia.jpg" alt="" width="80">
+                                        <h3>Novas Tecnologias</h3>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imagens/cidade.jpg" alt="" width="80">
+                                        <h3>Novas Tecnologias</h3>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="lateral">
+                <div class="caixa">
+                    <h2>Entrevistas</h2>
+                    <div class="caixa_conteudo">
+                        <ul>
+                            <li> <a href="">José Almeida</a> </li>
+                            <li> <a href="">Felipe Silva</a></li>
+                            <li> <a href="">Renato Rodrigues</a></li>
+                            <li><a href=""> Abelardo Silveira</a></li>
+                            <li><a href="">André Carlos</a></li>
+                            <li><a href="">Márcio Mello</a></li>
+                            <li><a href="">João Pedro</a></li>
+                            <li><a href="">Fernando Weis</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="caixa">
+                    <h2>News</h2>
+                    <div class="caixa_conteudo">
+                        <form action="">
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" placeholder="E-mail">
+                                <div>
+                                    <input class="submit" type="submit" Value="Cadastrar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="container_rodape">
+        <div id="rodape">
+            &copy Copyright 2000-2018 Notícias Cidade
+        </div>
+    </div>
+
+    
+</body>
+</html>

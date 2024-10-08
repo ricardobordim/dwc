@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Cidade - Seu site de Notícias</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background: #fff url("imagens/fundo.png") repeat-x left top;
+    }
+    #container{
+        width: 700px;
+        margin:0 auto;
+        border: 1px solid red;
+    }
+    #topo{
+        height: 150px;
+        border: 1px solid red;
+        background: url("imagens/detalhe-topo.png") no-repeat right top;
+        padding-top: 25px;
+    }
+    .logo{
+        width:152px;
+        height: 66px;
+        background: url("imagens/logo.png") no-repeat center;
+        /* Esquema para leitores de sites */
+        text-indent: -3000px;
+    }
+    ul{
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+   #topo ul{
+        margin-top: 30px;
+        background: #b10333;
+        float:left;
+    }
+
+    #topo ul li{
+        float:left;
+    }
+
+    #topo ul li a{
+        font-size: 0.9 em;
+        display: block;
+        padding: 0.5em 1.2em;
+        line-height: 2.1em;
+        text-decoration: none;
+        color: #fff;
+        background: url("imagens/divisor.png") repeat-y left center;
+    }
+    #topo ul .primeiro a{
+        background: none;;
+    }
+    #topo ul a:hover{
+        color:#69001d;
+    }
+    body.home #navegacao a#home,
+    body.brasil #navegacao a#brasil,
+    body.internacional #navegacao a#internacional,
+    body.fotos #navegacao a#fotos{
+        color:#fff;
+        background: #de003d;
+        cursor:text;
+    }
+
+    </style>
+</head>
+<body class="home">
+    <div id="container">
+        <div id="topo">
+            <h1 class="logo">Notícias Cidade</h1>
+            <ul id="navegacao">
+                <li class="primeiro" > <a id="home" href="index.html">Home</a> </li>
+                <li> <a id="brasil" href="brasil.html">Brasil</a> </li>
+                <li> <a id="internacional" href="internacional.html">Internacional</a> </li>
+                <li> <a id="economia" href="economia.html">Economia</a> </li>
+                <li> <a id="saude" href="saude.html">Saúde</a> </li>
+                <li> <a id="ciencia" href="ciencia.html">Ciências</a> </li>
+                <li> <a id="fotos" href="fotos.html">Fotos</a> </li>
+
+
+            </ul>
+        </div>
+        <div >
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
