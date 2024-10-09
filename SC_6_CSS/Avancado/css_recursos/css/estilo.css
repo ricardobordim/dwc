@@ -1,0 +1,149 @@
+#caixa{
+    width:300px;
+    height:300px;
+    background:#b9c941;
+    padding:50px;
+    margin:10px;
+    border-radius: 20px 90px;
+
+    /* Rodar em diferentes Browser */
+    
+    /* -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box; */
+    
+    /* -webkit-border-radius: 20px 90px;
+    -moz-border-radius: 20px 90px;
+    border-radius: 20px 90px;
+ */
+}
+#caixa2{
+    width:300px;
+    height:300px;
+    background:yellow;
+
+}
+#caixa3{
+    width:300px;
+    height:300px;
+    /* Agora não aumenta devido ao border-box não sofrer influência do padding*/
+    padding:50px;
+    margin:10px;
+    box-sizing:border-box;
+    background:blue;
+}
+#caixa4{
+    width:300px;
+    height:300px;
+    /* background: url("../imagens/camera.png"); */
+    /* Gradiente */
+    /* background: linear-gradient(red, green); */
+    /* background: linear-gradient(to left, red, green); */
+    /* background: linear-gradient(to top, red, green); */
+    /* background: linear-gradient(90deg, red, green); */
+    /* background: linear-gradient(red, green, yellow, green, blue); */
+    /* background: radial-gradient(red, green); */
+    background: radial-gradient(red, green,blue);
+}
+#caixa4 h1{
+    /* background: rgb(150,150,150); */
+    /* Opacidade */
+    background:rgba(150,150,150,0.6);
+
+    
+
+}
+
+#caixa5{
+    width:300px;
+    height:300px;
+    padding:50px;
+    margin:10px;   
+    background:#009670;
+    /* sombra com Blur  3º parâmetro */
+    /* box-shadow: 20px 20px 10px black; */
+    /* Spread ampliação 4º parâmetro */
+    box-shadow: 20px 20px 10px 50px black;
+
+}
+#caixa5 h1{
+    color:white;
+    /* Sombras */
+    text-shadow:5px 5px black;
+    /* text-shadow:-5px -5px black; */
+    /* text-shadow:20px 20px rgba(0,0,0,0.2); */
+    /* Borrado - blur */
+    text-shadow:20px 20px 5px black;
+
+}
+/* Animações */
+@keyframes animacao-caixa{
+    from{
+        background:red;
+        border-radius:0px;
+        top:0;
+        left:0;
+    }
+    to{
+        background:yellow;
+        border-radius:300px;
+        top:200px;
+        left:200px;
+
+    }
+}
+/* 
+@-webkit-keyframes animacao-caixa{
+    from{
+        background:red;
+    }
+    to{
+        background:yellow;
+    }
+}
+@-moz-keyframes animacao-caixa{
+    from{
+        background:red;
+    }
+    to{
+        background:yellow;
+    }
+} */
+#caixa6{
+    width:300px;
+    height:300px;
+    padding:50px;
+    margin:10px; 
+    position:relative;
+    /* animation-name: animacao-caixa;
+    animation-duration:5s;
+    animation-delay:1s; 
+    animation-iteration-count:5;
+    animation-direction:alternate;  */
+    animation: animacao-caixa 5s 1s 5 alternate;
+}
+#caixa7{
+    width:300px;
+    height:300px;
+    background:orange;
+}
+
+#caixa7:hover{
+    width:400px;
+    background:yellow;
+    /* Transições precisa dos prefixos*/
+    /* transition: width 3s; */
+    /* transition: width 3s; background:3s; */
+    transition:all 3s;
+
+}
+
+h1{
+    color:blue;
+}
+h1.cx3{
+    color:white;
+}
+.arredondamento{
+    border-radius:150px;
+}

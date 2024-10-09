@@ -1,0 +1,23 @@
+header{
+    border: 1px solid grey;
+    background:grey;
+    padding:10px;
+}
+nav{
+    color:blue;
+}
+footer{
+    background:yellow;
+    text-align:center;
+}
+article{
+    background:orange;
+    padding:10px;
+    border-radius: 50px 50px;
+}
+section{
+    border:1px dotted blue;
+}
+aside{
+    background:blue;
+}
