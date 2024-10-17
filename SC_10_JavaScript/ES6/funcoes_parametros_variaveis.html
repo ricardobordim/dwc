@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Parâmetros Variaveis</title>
+    <script>
+       /* 
+        function calcularAreaTerreno(largura,comprimento){
+            var area = largura * comprimento;
+            return area;
+        }
+        var largura = parseFloat(prompt('Digite a largura do terreno'));
+        var comprimento = parseFloat(prompt('Digite o comprimento do terreno'));
+        document.write('Área . :'+ calcularAreaTerreno(largura,comprimento) + ' do terreno');
+        
+        function soma(a,b){
+            return a+b;
+        }
+        console.log(soma(7,5));
+        // Descarta ao natural os outros parâmetros.
+        console.log(soma(7,5,6,7));
+        
+        //Retorna algo que não é número , o b= undefined;
+        console.log(soma(7));
+
+        //Retonar not a number , a e b = undefined
+        console.log(soma());
+        */
+
+        // Parâmetros Variáveis no Contexto da Função
+        // arguments é um objeto, não um array
+        function soma(){
+            var resultado = 0;
+            for (var i in arguments) {
+                resultado += arguments[i];
+            }
+            return resultado;
+        }
+        console.log(soma(7,5,3.2,0.8));
+
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

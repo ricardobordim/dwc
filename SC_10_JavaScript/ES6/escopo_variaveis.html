@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Escopo</title>
+    <script>
+        //3 Escopos = Global, função e bloco;
+
+        //escopo de bloco
+        var serie= "Friends";
+        if (true){
+            var serie2 = "game of thrones"
+            document.write(serie);
+        }
+        document.write('<br>');
+        document.write('Serie 2a =  ' + serie2);
+        document.write('<br>');
+
+
+        function x(){
+            var serie3 = 'The Walking Dead';
+            document.write(serie);
+            document.write('<br>');
+            document.write('Serie 2b =  ' + serie2);
+
+        }
+        x();
+
+        document.write('<br>');
+        //Não mostra
+        document.write(serie3);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

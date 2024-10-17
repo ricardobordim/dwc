@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+    <script>
+        class Produto{
+            constructor(descricao, preco){
+                this.descricao = descricao;
+                this.preco = preco;
+            }
+            verDescricao(){
+                //backticks
+                console.log(`${this.descricao} por apenas ${this.preco}`);
+            }
+        }
+        let produto = new Produto('Notebook Gamer', 3500);
+        produto.verDescricao();
+        
+        //Objeto Literal ou Estático - Observe a vírgula e os dois pontos
+        // Considerar como um objeto descrito de pares Chave/atributo com Valor
+        let produtoLiteral = {
+            descricao : 'Geladeira',
+            preco : 2500,
+            // O this referencia o objeto, sem o this teria que ser passado por parâmetro da função
+            verDescricao : function(){
+                console.log(`${this.descricao} por apenas ${this.preco}`);
+            }
+        }
+
+        // Objetos literais são únicos, não precisa criar uma classe disso;
+        // É comum nas aplicações que possum formulário que são submetidos ao servidor.
+        // Nesse ponto vc recupera os dados do formulário e monta um objeto literal
+        // Do objeto literal, vc gera um JSON,
+        // Encaminha esse JSON anexado ao HTTP para o Servidor;
+        // No servidor vc trata e pode armazenar.
+
+
+
+        produtoLiteral.verDescricao();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

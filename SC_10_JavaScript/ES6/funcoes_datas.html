@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var data = new Date();
+
+        document.write('<br>');
+        document.write(data.getDate());
+        document.write('<br>');
+        document.write(data.getMonth()+1);
+        document.write('<br>');
+        document.write(data.getFullYear());
+
+        //Adicionar ou remove dias.
+
+        document.write('<br>');
+        document.write(data.toString());
+        // mais um dia
+        data.setDate(data.getDate()+1);
+        document.write('<br>');
+        document.write(data.toString());
+        //mais 2 anos
+        document.write('<br>');
+        data.setDate(data.getDate() + 720);
+        document.write(data.toString());
+
+        document.write('<br>');
+        data.setMonth(data.getMonth() + 2);
+        document.write(data.toString());
+
+        document.write('<br>');
+        data.setFullYear(data.getFullYear() + 1);
+        document.write(data.toString());
+
+        var d1 = new Date(2024,3,1);
+        var d2 = new Date(2024,11,31);
+
+        document.write('<br>');
+        document.write('<hr>');
+        document.write(d1.toString());
+        document.write('<br>');
+        document.write(d2.toString());
+
+        // Converter Data
+        document.write('<br>');
+        document.write('<hr>');        
+
+        // getTime = Tempo em milisegundo desde 01/01/1970.
+        document.write(d1.getTime());
+        document.write('<br>');
+        document.write(d2.getTime());
+        document.write('<br>');
+        document.write('<hr>');     
+
+        // Encontrar a qtidade de milissegundos entre a d1 e d2, usando o Math.abs para o módulo
+        document.write(Math.abs(d1.getTime() - d2.getTime()));
+        document.write('<br>');
+        document.write('1 dia tem .: + '+ 1*24*60*60*1000 + ' tem milissegundos');
+        document.write('<br>');
+        // Arredondando para cima, já que daria dias quebrados...
+        document.write('Faltam ' + Math.ceil(Math.abs(d1.getTime() - d2.getTime())/(1 * 24 * 60 * 60 * 1000)) + ' dias para o Fim do Ano');
+
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

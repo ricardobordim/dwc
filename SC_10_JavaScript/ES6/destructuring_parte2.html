@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Parte 2</title>
+    <script>
+        //destructuring = desestruturação
+
+        let produto = {
+            descricao : 'Notebook',
+            preco : 1800,
+            detalhes:{
+                fabricante: 'ABC',
+                modelo:'XYZ'
+            }
+        }
+
+        // composição 
+        // é um (maneira comum de objeto literal)
+        // tem um (a forma criada com um objeto tendo um atributo outro objeto)
+
+        // O Token do destruct varia array [] = Colchetes
+        // O Token do destruct varia objeto {} = Chaves
+
+
+        let {descricao, preco} = produto;
+        console.log(descricao, preco);
+        
+        // trocando o nome das variaveis
+        let {descricao:a, preco:b} = produto;
+        console.log(a, b);
+        
+        // valores Default
+        let {descricao:c, preco:d=2500, desconto=5} = produto;
+        console.log(c, d, desconto);
+        
+        
+        // Extrair objetos de outros objetos
+        let {detalhes:{fabricante:montadora, modelo = 'Não Informado'}} = produto;
+        console.log(montadora, modelo);        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

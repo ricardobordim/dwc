@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //netflix
+
+        //Pode ficar em qualquer lugar o throw
+        //throw new Error('Houve um Erro, mas não se preocupe, estamos trabalhando nisso agora');
+        var video = Array();
+        video[1] = Array();
+        video[1]['nome'] = 'Pokemon';
+        video[1]['categoria'] = 'Anime';
+
+        function getVideo(video){
+            //abaixo não é erro, sendo apenas undefined
+            console.log(video[0]);
+            try {
+                // Quando acesso um atributo de um undefined, gera um erro
+                console.log(video[0]['nome']);
+            } catch (deu_erro) {
+                //esse parâmetro que vc recebe o erro.  Pode ser qualquer nome
+                console.log('Agora sim vamos tratar o erro');
+                tratarErro(deu_erro);
+                // Lançou o throw ele para a aplicação
+                throw new Error('Houve um Erro, mas não se preocupe, estamos trabalhando nisso agora');
+
+                
+            }
+            finally{
+                console.log('Sempre passa por aqui');
+            }
+
+            //abaixo gera um erro
+            console.log('Aplicação não Morreu');
+        }
+
+        getVideo(video);
+        function tratarErro(e){
+            // Lógica deveria ser implementada para registrar esse erro.
+            console.log(e);
+        }
+
+   
+  </script>
+</head>
+<body>
+    
+</body>
+</html>

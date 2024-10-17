@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMACS</title>
+    <script>
+        // Variáveis com var sofrem içamento hosting, enquanto let preverva o escopo
+        var serie = 'Friends';
+        function x(){
+            var serie2 = 'Halo';
+            console.log('Funcao: ' +serie + ', '+ serie2);
+            if (true){
+                console.log('Funcao e bloco: ' + serie +', '+ serie2);
+            }
+        }
+        x();
+        if(true){
+            var serie3 = 'Stranger Things';
+            console.log('Bloco:' + serie + ', ' + serie3);
+            // Repare que o serie2 está dentro da função e não sofre elevação
+            // console.log('Bloco:' + serie+ ', ' + serie2 + ', ' + serie3);
+        }
+        // repare que o série3 está dentro do bloco, mas no escopo externo, então sofre elevação...
+        console.log('Bloco:' + serie + ', ' + serie3);
+
+        if(true){
+            let filme = 'Star Wars';
+            console.log(filme);
+        }
+        console.log(filme);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

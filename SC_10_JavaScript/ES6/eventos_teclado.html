@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style type="text/css">
+        body{
+            display: inline;
+        }
+
+    </style>
+    <script>
+        function acao1(){
+            alert('Evento I');
+        }
+        function acao2() {
+            alert('Evento II');
+        }
+        function acao3() {
+            alert('Evento III');
+        }
+                
+        
+        
+    </script>
+</head>
+<body>
+    <br>
+    <input onkeydown="acao1()" type="text">
+    <br/>
+    <br/>
+    <input onkeyup="acao2()" type="text">
+    <br>
+    <br>
+    <input onkeypress="acao3()" type="text">
+</body>
+</html>

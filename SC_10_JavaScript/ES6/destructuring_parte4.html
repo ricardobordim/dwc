@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Parte 4 com Rest</title>
+    <script>
+        //destructuring = desestruturação no contexto de funções
+        // Arrays e Objetos como parâmetros de funções e dentro delas
+        // desestruturar e pegar somente o necessário
+
+        let array1 = [10,20,30,40];
+        let [a,...resto] = array1;
+        console.log(a);
+        console.log(resto);
+        
+        let obj = {
+            a: 10,
+            b:20,
+            c:30,
+            d:40
+        }
+        
+        let {b,...x}= obj;
+        console.log(b);
+        console.log(x);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Parte 3</title>
+    <script>
+        //destructuring = desestruturação no contexto de funções
+        // Arrays e Objetos como parâmetros de funções e dentro delas
+        // desestruturar e pegar somente o necessário
+
+        let array1 = [10,20,30,40];
+        // processo convencional
+        function teste(a,b) {
+            console.log(a,b)
+            
+        }
+        teste(array1[0],array1[1]);
+        
+
+        //Agora utilizando a desestruturação, repare no colchetes
+        function teste2([a,b,,c,e=100]){
+            console.log(a,b,c,e)
+            
+        }
+        teste2(array1);
+
+        //Objeto literal
+        let obj={
+            a:10,
+            b:20,
+            c:30,
+            d:40
+        }
+        function teste3(a,b){
+            
+            console.log(a,b)
+        }
+        teste(obj.a, obj.b);
+        
+        // desestruturar lembrando que sao atributos, logo não precisa sequencia.
+        
+        function teste4({a:x,d, z=50}){
+            
+            console.log(x,d,z)
+        }
+        teste4(obj)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

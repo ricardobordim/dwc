@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            if(id){
+                callbackSucesso('Funções de Sucesso em JS', 'Funções são muito utilizadas');
+            }else {
+                callbackErro('Erro ao recuperar os dados');
+            }
+        }
+        // exibirArtigo(1,function (){..}, function() {...})
+
+        var callbackSucesso = function(titulo, descricao){
+
+            document.write('<h1>' + titulo + '</h1>');
+            document.write('<hr>');
+            document.write('<p>' + descricao + '</p>');
+        }
+
+        var callbackErro = function(erro){
+            document.write('<p> <b> Erro : ' + erro + '</p>');
+
+        }
+        // Não uso o abre e fecha parenteses para que seja encaminhada função e não o valor
+        // exibirArtigo(1, callbackSucesso(), callbackErro());
+
+        exibirArtigo(false,callbackSucesso,callbackErro);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

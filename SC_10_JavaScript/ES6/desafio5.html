@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio V</title>
+
+    <style type="text/css">
+        .estilo1{
+            background-color: red;;
+            color: white;
+
+        }
+
+
+    </style>
+    <script>
+        function modificarCor(cor){
+            document.getElementById('texto').style.backgroundColor = cor;
+        }
+        function modificarCor2() {
+            var v1= document.getElementById('texto').value;
+                v1.trim();
+                if (v1.length >3){
+                    document.getElementById('texto').style.backgroundColor = 'green';
+                }else{
+                    document.getElementById('texto').style.backgroundColor = 'red';
+                }
+        }
+
+    </script>
+</head>
+<body>
+    <h3>Manipulando Inputs</h3>
+
+    <div></div>
+    <input id="texto" onblur="modificarCor2()" onfocus="modificarCor('yellow')" type="text" placeholder="Informe os dados" style="background-color: aqua;">
+
+
+</body>
+</html>

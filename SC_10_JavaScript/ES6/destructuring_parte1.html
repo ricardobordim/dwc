@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Parte 1</title>
+    <script>
+        //destructuring = desestruturação
+
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão'];
+        
+        //Essa sintaxe fica verbosa..
+        let a = frutas[0];
+        let b = frutas[1];
+        let c = frutas[2];
+        // Abaixo é um destructur ou seja array antes de atribuicao [] =
+        // Não preciso pegar todos os indices do array
+        
+        let [d,e,f] = frutas;
+        console.log(a);
+        console.log(e);
+
+
+        // Pulando uma variável e atribuindo um valor default
+        let sacola = ['Abacaxi', 'Uva', 'Pera', 'Mamão'];
+        let [j,k,l,m,n='Banana'] = sacola;
+        console.log(j,k,l,m,n);
+
+        // fazendo arrays multidimensionais.
+
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'],['Jose','Maria']];
+
+        //      Pulei o primeiro indice e quero algo de dentro do array
+        let [,[,o]] = coisas;
+        let p = coisas[1][1];
+
+        console.log(o);
+        console.log(p);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

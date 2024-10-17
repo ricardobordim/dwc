@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var lista_frutas = Array();
+
+        lista_frutas[0] = "Banana"; 
+        lista_frutas[1] = "Maçã"; 
+        lista_frutas[2] = "Laranja"; 
+        lista_frutas[3] = "Morango"; 
+        lista_frutas[4] = "Abacate"; 
+        lista_frutas[5] = "Uva"; 
+
+
+        console.log(lista_frutas);
+
+        // sort = Para ordenar alfanuméricos
+
+        console.log(lista_frutas.sort());
+        
+        var lista_numeros = [];
+        lista_numeros[0] = 12;
+        lista_numeros[1] = 2;
+        lista_numeros[2] = 72;
+        lista_numeros[3] = 17;
+        lista_numeros[4] = 9;
+        lista_numeros[5] = 15;
+        lista_numeros[6] = 5;
+        lista_numeros[7] = 42;
+        lista_numeros[8] = 57;
+        lista_numeros[9] = 63;
+
+        // Ordenado por alfanumérico
+        console.log(lista_numeros.sort());
+
+
+        //Ordena Numerico
+
+        // Função padrão para ordenação numérica, com passagem por referência e não por parâmetro
+        console.log(lista_numeros.sort(ordenaNumero));
+
+        function ordenaNumero(a,b) {
+            return a-b;
+            
+        }
+
+
+
+
+
+
+
+
+        
+
+
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

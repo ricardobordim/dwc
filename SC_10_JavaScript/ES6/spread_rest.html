@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Spread</title>
+    <script>
+        // Contexto spread = espalhar.
+
+        // string
+
+        let tituloArtigo = 'Como utilizar o operador rest/spread';
+
+        console.log(tituloArtigo);
+        console.log(...tituloArtigo);
+        console.log([...tituloArtigo]);
+
+        //arrays
+
+        let listaCursos1 = ['NodeJs e MongoDB', 'ES6, TypeScript e Angular4'];
+        let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux' ]
+        
+        // Fez um spread incluindo todos os valores e não diretamente o array
+        let listaCursosCompleto = ['Web Completo', 'Android Completo', ...listaCursos1, ...listaCursos2]
+
+        console.log(listaCursosCompleto);
+
+
+        // Contexto de objetos
+        let pessoa = {
+            nome: 'João',
+            idade : 27
+        }
+        let clone = {endereco: 'Rua Abc',...pessoa}
+
+        console.log(clone);
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

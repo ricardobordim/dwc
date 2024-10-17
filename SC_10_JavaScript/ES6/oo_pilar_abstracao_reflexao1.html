@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexão</title>
+    <script>
+        //Um software de Marcenaria
+
+        //Procedural
+
+       let qtde_pernas = 4;
+       let giratoria = false;
+       let cor = 'azul';
+       let revestimento = 'courvin';
+
+       function girarCadeira(x){
+        if (x){
+            console.log('giratória');
+        }else {
+            console.log('Não giratória');
+        } 
+       }
+       girarCadeira(true);
+       
+
+       //Uma lista de cadeiras
+
+        let cadeiras = Array();
+        cadeiras[0] = Array();
+        cadeiras[0]['qtde_pernas']= 4;
+        cadeiras[0]['giratoria']= false;
+        cadeiras[0]['cor']= 'azul';
+        cadeiras[0]['revestimento']= 'Courvin Facto';
+
+        cadeiras[1] = Array(); 
+        cadeiras[1]['qtde_pernas'] = 1;
+        cadeiras[1]['giratoria'] = true;
+        cadeiras[1]['cor'] = 'preta';
+        cadeiras[1]['revestimento'] = 'Courvin Facto';
+
+        girarCadeira(cadeiras[0]['giratoria'])
+
+        
+        function adicionarCadeira(qtde_pernas, giratoria, cor, revestimento){
+            let cadeira = Array();
+            cadeiras['qtde_pernas'] = qtde_pernas;
+            cadeiras['giratoria'] = giratoria;
+            cadeiras['cor'] = cor;
+            cadeiras['revestimento'] = revestimento;
+            
+            cadeiras.push(cadeira);
+
+
+        }
+        adicionarCadeira(3,false,'Verde','Tecido')
+        console.log(cadeiras);
+
+        //Orientação Objeto
+
+        class Cadeira{
+            constructor(qtde_pernas, giratoria, cor, revestimento){
+                this.qtde_pernas = qtde_pernas;
+                this.giratoria = giratoria;
+                this.cor = cor;
+                this.revestimento = revestimento;                
+            }
+            girarCadeira(){
+                if (this.giratoria){
+                    console.log('Gira');
+                } else {
+                    console.log('Não Gira');
+                }
+
+            }
+        }
+
+        let cadeira1 = new Cadeira(4,false, 'amarelo','plástico');
+        let cadeira2 = new Cadeira(1,true, 'azul','plástico');
+        cadeira1.girarCadeira();
+        cadeira2.girarCadeira();
+        console.log(cadeira1);
+
+        let cadeirasMatriz = Array();
+        cadeirasMatriz.push(new Cadeira(1,true,'purple', 'plastic'));
+        cadeirasMatriz.push(new Cadeira(3,false,'yellow', 'plastic'));
+        console.log(cadeirasMatriz);
+        
+
+
+
+
+   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

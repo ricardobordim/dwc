@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+    <script>
+
+        //Objeto Literal ou Estático - Observe a vírgula e os dois pontos
+        // Considerar como um objeto descrito de pares Chave/atributo com Valor
+
+        let nome = 'Jorge';
+        let idade = 29;
+        let sexo = 'Masculino';
+        let profissao = 'Programador';
+
+        let objeto = {
+            nome: nome,
+            idade : idade,
+            sexo : sexo,
+            profissao : profissao,
+            exibirResumo: function(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`);
+            }
+        }
+        console.log(objeto);
+        objeto.exibirResumo();
+
+        
+        // ES6 permitiu suprimir o valor do par nome : valor, quando possuirem o mesmo nome,
+        // apesar de serem referências diferentes
+        let objeto2 = {
+            nomeTeste : nome,
+            idade,
+            sexo,
+            profissao,
+            exibirResumo() {
+                console.log(`${this.nomeTeste}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`);
+            }
+        }
+        console.log(objeto2);
+        objeto2.exibirResumo();        
+
+        // Objetos literais são únicos, não precisa criar uma classe disso;
+        // É comum nas aplicações que possum formulário que são submetidos ao servidor.
+        // Nesse ponto vc recupera os dados do formulário e monta um objeto literal
+        // Do objeto literal, vc gera um JSON,
+        // Encaminha esse JSON anexado ao HTTP para o Servidor;
+        // No servidor vc trata e pode armazenar.
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

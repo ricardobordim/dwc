@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+    <script>
+        function parte1(){
+            var lista =['Banana','Maçã', 'Uva', 'Pêssego', 'Goiaba', 'Larana' ];
+
+            for (var index = 0; index < lista.length; index++) {
+                document.write('Frutas :' + lista[index] + '<br/>');
+            }
+
+        }
+        function parte2(){
+            var x =1;
+
+            while (x<=10) {
+                var y=1;
+                while (y<=10) {
+                    document.write('->' + x + ' * ' + y + ' = ' + (x*y) + '<br>');
+                    y++;
+                }
+                document.write('<hr>');
+                x++;
+            }
+
+
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="parte1()" type="button"> Parte 1</button>
+    <button onclick="parte2()" type="button"> Parte 2</button>
+    
+</body>
+</html>

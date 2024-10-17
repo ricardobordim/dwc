@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMACS</title>
+    <script>
+        let quadrado = function(x=1)
+        {
+            return (x * x);
+        }
+        document.write(quadrado(13));
+        
+        // Arrow Function com nenhum ou varios parametros, usar o parenteses
+        let triplo = (x=1) => {
+            return(x*x*x)
+        }
+        document.write(triplo(5));
+
+        // Arrow Function com Somente uma variável e uma única instrução 
+        // pode retirar os parênteses, as chaves e o return.
+        let dobro = x => (x+x);
+        document.write(dobro(11.5));
+
+        let parOuImpar = function(numero){
+            if ((numero %2) ===0) {
+                return 'Par'
+            }else {
+                return 'Impar'
+            }
+        }
+        document.write(parOuImpar(7));
+
+        // Refazendo o parOuImpar com Arrow Function e If Ternário
+
+        let parImpar = numero => ((numero%2 ===0) ? 'Par' : 'Impar' );
+        document.write(parImpar(8));
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

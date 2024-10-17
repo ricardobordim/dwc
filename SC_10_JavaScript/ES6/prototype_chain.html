@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <script>
+        // Todos são filhos de Object.prototype
+
+        Object.prototype.attr50 = 'Z'; //Cuidado que todo objeto criado terá esse atributo
+
+        let animal = {attr1 : 'a'}
+        let vertebrado = {__proto__:animal, attr2: 'b'}
+        // Ajustar a herança para funcionar
+        let ave = {__proto__:vertebrado, attr3:'c'}
+
+        // Sombreamento ou redefinição do attr3, buscando no lugar mais próximo
+        let passarinho = {__proto__:ave, attr3:'e'}
+        
+        console.log(`Prototype ${ave.attr1} , ${ave.attr2}`);
+        console.log(ave.attr3);
+        
+        // Criando um atributo que não exista em nenhum outro objeto, mas é comum para todos os objetos
+        console.log(passarinho.attr3, passarinho.attr50);
+        
+        
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+
+    <script>
+        var num1 = parseFloat(prompt('Informe o primeiro numero:'));
+        var operacao = prompt('Informe a operacao:');
+        operacao = operacao.toLowerCase();
+        var num2 = parseFloat(prompt('Informe o segundo numero:'));
+        function calcular(n1, op, n2) {
+            var resultado = null;
+            if (op =='soma'){
+                resultado = n1 + n2;
+            }else{
+                resultado = n1 - n2;
+            }
+            return resultado;
+            
+        }
+        document.write('O Resultado é :'+ calcular(num1,operacao,num2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

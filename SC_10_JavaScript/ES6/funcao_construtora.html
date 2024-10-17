@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Construtora</title>
+    <script>
+        // Função Construtora é antigo e a base do JS - É uma função com característica de classe
+        let Carro = function(){
+            this.cor = 'Amarelo';
+            this.modelo = 'Gol';
+            this.velocidadeAtual = 0;
+            this.velocidadeMaxima = 180;
+            this.acelerar = function(x){
+                 //Por questão de encapsulamento (regras) - não fazer assim
+                //  this.velocidadeAtual +=10;
+                let velocidade = this.getVelocidadeAtual() + x;
+                this.setVelocidadeAtual(velocidade);
+
+
+            }
+            this.getVelocidadeAtual = function(){
+                return this.velocidadeAtual;
+            }
+            this.setVelocidadeAtual = function(velocidadeAtual){
+                this.velocidadeAtual = velocidadeAtual;
+            }
+        }
+        let carro = new Carro();
+        carro.acelerar(10);
+        console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`);
+        carro.acelerar(50);
+        console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`);
+
+        
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+
+    <script>
+        // &&= E ; || = OU ; ! = NÃO
+
+        if (2==2 && 3 >=1){
+            document.write("Verdadeiro <br> <hr>");
+        }
+        if (!(2==4)){
+            document.write("verdadeiro <br> <hr>");
+        }
+
+        var nota = prompt('Digite a Nota do Aluno:');
+        var faltas = prompt('Digite a qutde de faltas.:');
+
+        var media = 7;
+        var faltasMaximas = 15;
+
+        if ((nota >= media) && (faltas <= faltasMaximas)){
+            document.write('Aprovado <br>');
+        }
+        else {
+            document.write('Reprovado <br>');
+        }
+
+        // Operador Ternário = <condição> ? <verdadeiro> : <falso>
+        var resultado = (nota>=media && faltas <=faltasMaximas) ? 'Aprovado 2' : 'Reprovado2';
+        document.write(resultado + '<br>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

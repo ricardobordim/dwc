@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a=5;
+        let b=5;
+        let op = '+';
+
+        function calcular(a=1,b=2,c=''){
+            switch (c) {
+                case '*':
+                    return (a*b);
+                    break;
+            
+                default:
+                    return(0);
+                    break;
+            }
+        }
+        console.log(calcular(5,5,'*'));
+
+        class Calculadora{
+            constructor(){
+                this.c =5;
+                this.d = 5;
+                this.op2 = '+';
+            }
+            calcular(c,d, op2){
+                switch (op2) {
+                    case '*':
+                        return (c * d);
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
+        }
+        calculadora = new Calculadora();
+        console.log(calculadora.calcular(3,5,'*'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

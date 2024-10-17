@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulamento</title>
+    <script>
+        class Tv{
+            constructor(){
+                this._relacaoCanais = Array(2,4,5,7,10);
+                this._canalAtivo =5;
+                this._volume = 20;
+            }
+            get canalAtivo(){
+                return this._canalAtivo;
+            }
+
+            set canalAtivo(canal){
+                if(this._relacaoCanais.indexOf(canal) !==-1){
+                    console.log(canal);
+                };
+            }
+        }
+        let tv = new Tv();
+
+
+        //A convenção nao encoraja fazer isso e sim usar o Setters
+        // tv._canalAtivo = 8;
+
+        //O código abaixo é considerado o correto e próprio javascript que confere
+        // se estou atribuindo valor vai para o set e senão vai para o get
+        // repare que foi chamado apenas o metodo canalAtivo, sem dizer se era get ou set
+        tv.canalAtivo = 8;
+
+        //O Get cria internamente o metodo como uma pseudo variável
+        console.log(tv.canalAtivo);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var lista=['Jorge', 'Hamilton', 'José', 'Maria', 'Jesus', 'Nazareno'];
+
+        // Usando todos os parâmetros
+        /*
+        lista.forEach(function(valor, indice, array){
+            console.log('Indice[' + indice + '] = ' + valor);
+
+            if (valor =='Hamilton'){
+                array[indice]='Tiago';
+            }
+        })*/
+
+        //Usando parametros variaveis
+        /*
+        lista.forEach(function(valor){
+            console.log(valor);
+        })*/
+
+        //Tecnica wrapper - permite o reuso em outros locais
+        var f= function(valor, indice){
+            console.log(valor,indice);
+        }
+        lista.forEach(f);
+
+        console.log(lista);
+
+        // Foreach atua Somente sobre os numericos >= 0
+        var lista_obj = Array();
+        lista_obj['x']='A';
+        lista_obj[false] = 'B';
+        lista_obj[12] = 'c';
+        lista_obj[true] = 'C';
+        lista_obj[-12] = 'H';
+        lista_obj[4] = 'F';
+        lista_obj['d'] = 'A';
+
+        lista_obj.forEach(f);
+
+
+
+
+
+        
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+    <script>
+
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor;
+                this.tamanho = tamanho;
+                this.peso = peso;
+            }
+            dormir() {
+                console.log('Dormir');
+            }
+        }
+
+        class Ave extends Animal {
+            constructor(bico,cor, tamanho,peso) {
+                super(cor, tamanho,peso)
+                this.bico = bico;
+            }
+            voar() {
+                console.log('Voar');
+            }
+        }  
+        class Papagaio extends Ave{
+            constructor(sabeFalar,cor, tamanho, peso ){
+                super('Médio', cor, tamanho,peso);
+                this.sabeFalar = sabeFalar;
+            }
+            falar(){
+                console.log('Falar');
+            }
+        }      
+
+
+        let papagaio = new Papagaio(true, "Amarelo", 11, 325);
+        let papagaio2 = new Papagaio(false, "Verde", 7, 80);
+  
+
+        papagaio.dormir();
+        papagaio.falar();
+        console.log(papagaio);
+        console.log(papagaio2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

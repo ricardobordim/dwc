@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu e o Mauro</title>
+    <script>
+        //Procedural
+        
+
+        let cor = 'azul';
+        let qtde = 4;
+        let revestimento = 'tecido';
+        let reclina = true;
+
+        let poltronas = Array();
+        poltronas[0]=Array();
+        poltronas[0]['cor']='azul';
+        poltronas[0]['qtde'] = 4;
+        poltronas[0]['revestimento']='tecido';
+        poltronas[0]['reclina']=true;
+
+        poltronas[1] = Array();
+        poltronas[1]['cor'] = 'vermelho';
+        poltronas[1]['qtde'] = 2;
+        poltronas[1]['revestimento'] = 'couro';
+        poltronas[1]['reclina'] = false;
+
+        console.log(poltronas);
+
+
+        function  reclinarPoltrona(reclinavel){
+            if (reclinavel){
+                console.log('Poltrona reclinável')
+            }else{
+                console.log('Poltrona Não é reclinável')
+            }
+        }
+
+
+        function adicionarPoltrona(cor, qtde, revestimento, reclina){
+            let poltrona = Array();
+            poltrona['cor']=cor;
+            poltrona['qtde']=qtde;
+            poltrona['revestimento']=revestimento;
+            poltrona['reclina']=reclina;
+
+            poltronas.push(poltrona);
+
+        }
+
+        reclinarPoltrona(reclina);
+        reclinarPoltrona(poltronas[1]['reclina']);
+
+        adicionarPoltrona('Marron', 1,'Courvin',true);
+        console.log(poltronas);
+
+        //Objeto
+
+        class Poltrona{
+
+            constructor(cor1, qtde1, revestimento1, reclina1){
+                this.cor = cor1;
+                this.qtde = qtde1;
+                this.revestimento = revestimento1;
+                this.reclina = reclina1;
+            }
+
+            reclinarPoltrona()
+            {  if(this.reclina) {
+                  console.log('POLTRONA RECLINÁVEL')
+               }else{
+                  console.log('POLTRONA NÃO É RECLINÁVEL')
+               }
+            }
+        }
+
+        let poltrona1 = new Poltrona('Preto',4,'COURO',false);
+        let poltrona2 = new Poltrona('Amarelo',1,'COURO',true);
+
+        let poltronaMatriz = Array();
+        poltronaMatriz.push(new Poltrona('Amarelo', 1, 'COURO', true));
+        poltronaMatriz.push(new Poltrona('Amarelo', 1, 'COURO', true));
+
+        poltrona1.reclinarPoltrona();
+        poltrona2.reclinarPoltrona();
+
+        console.log(poltronaMatriz);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

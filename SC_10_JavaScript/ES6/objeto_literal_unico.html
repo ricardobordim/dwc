@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Literal</title>
+    <script>
+
+        //Objeto Literal ou Estático - Observe a vírgula e os dois pontos
+        // Considerar como um objeto descrito de pares Chave/atributo/nome com Valor
+
+        let assinatura = {
+            idCliente:1000,
+            descricao:  'Acesso a Internet',
+            status(){
+                console.log('Ativo')
+            }
+        }
+        
+        //Isso não é duplicação de valor e sim passagem por REFERÊNCIA.
+
+        console.log(assinatura.descricao);
+        let y= assinatura;
+        console.log(y.descricao);
+
+        assinatura.status();
+        y.descricao = 'Internet + Tv + telefone';
+        console.log(assinatura.descricao);
+        console.log(y.descricao);
+
+        let h = 'ola';
+        let b = h;
+        h = 'bom de mais'
+        console.log(b);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

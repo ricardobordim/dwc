@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function  tabuada() {
+ 
+            var z = document.getElementById('valor').value;
+        
+            for (var y=1 ; y <=10; y++) {
+                for (var x =0; x <=10; x++){
+                    document.write( x + ' * ' + y +'=' + (x*y) + '<br>');
+                }     
+                document.write('<hr>')  ;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="valor" type="text">
+    <button onclick="tabuada()"> Incluir</button>
+    
+</body>
+</html>

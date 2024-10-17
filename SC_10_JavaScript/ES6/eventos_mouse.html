@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style type="text/css">
+        body{
+            display: inline;
+        }
+
+    </style>
+    <script>
+        function acao(){
+            alert('Evento Disparado');
+        }
+        function acao2() {
+            alert('Evento Disparado');
+        }
+        function acao3() {
+            alert('Evento Combinado');
+        }
+                
+        
+        
+    </script>
+</head>
+<body>
+    <div onclick="alert('Teste')" style="background: #2e6dbe; height: 150px; width:150px"></div>
+    <br>
+    <div onclick="acao()" style="background: #8d1c9c; height: 150px; width:150px"></div>
+    <br>
+    <div ondblclick="acao2()" style="background: #7cbe24; height: 150px; width:150px"></div>
+    <br>
+    <div onmouseup="acao2()" style="background: #cc8d19; height: 150px; width:150px"></div>
+    <br>
+    <div onmouseover="acao2()" style="background: #e45b0d; height: 150px; width:150px"></div>
+    <br>
+    <div onmouseout="acao2()" style="background: #dd0707; height: 150px; width:150px"></div>
+    <br>
+    <div onclick="acao3()" ondblclick="acao2()" style="background: #dd0707; height: 150px; width:150px"></div>
+</body>
+</html>

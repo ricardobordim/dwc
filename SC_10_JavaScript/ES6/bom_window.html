@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+    let myWindow;
+
+    function openWin() {
+        myWindow = window.open("", "myWindow", "width=200, height=100");
+    }
+
+    function closeWin() {
+        myWindow.close();
+    }
+
+   
+  </script>
+</head>
+<body>
+    <button onclick="openWin()">Abrir Janela</button>
+    <button onclick="closeWin()">Fechar Janela</button>
+    <button onclick="window.print()">Imprimir Página</button>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+    <script>
+        class Cachorro{
+            constructor(){
+                this.cor = 'Branco';
+                this.tamanho = 30;
+                this.orelas = 'Grandes e caídas';
+            }
+            correr(){
+                console.log('Correr');
+            }
+            dormir(){
+                console.log('Dormir');
+            }
+            rosnar(){
+                console.log('rosnar');
+            }
+        }
+        class Passaro {
+            constructor() {
+                this.cor = 'Branco';
+                this.tamanho = 30;
+                this.bico = 'Curto';
+            }
+            voar() {
+                console.log('Voar');
+            }
+            dormir() {
+                console.log('Dormir');
+            }
+        }
+        let cachorro = new Cachorro();
+        let passaro = new Passaro();
+
+        class Animal {
+            constructor() {
+                this.cor = '';
+                this.tamanho = null;
+                this.peso = null;
+            }
+            dormir() {
+                console.log('Dormir');
+            }
+        }
+         class Cao extends Animal{
+            constructor() {
+                super()
+                this.orelas = 'Grandes e caídas';
+            }
+            correr() {
+                console.log('Correr');
+            }
+            rosnar() {
+                console.log('rosnar');
+            }
+        }
+        class Ave extends Animal {
+            constructor() {
+                super()
+                this.bico = 'Curto';
+            }
+            voar() {
+                console.log('Voar');
+            }
+        }  
+        class Papagaio extends Ave{
+            constructor(){
+                super();
+                this.sabeFalar = true;
+            }
+            falar(){
+                console.log('Falar');
+            }
+        }      
+
+        let cao = new Cao();
+        let ave = new Ave();
+        let papagaio = new Papagaio();
+        cao.correr();
+        ave.voar();
+        ave.dormir();
+        cao.dormir();
+        papagaio.dormir();
+        papagaio.falar();
+        console.log(cao);
+        console.log(ave);
+        console.log(papagaio);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

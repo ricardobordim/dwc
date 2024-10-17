@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style type="text/css">
+        body{
+            display: inline;
+        }
+
+    </style>
+    <script>
+        function acao1(){
+           console.log('Evento I');
+        }
+        function acao2() {
+            console.log('Evento II');
+        }
+        function acao3() {
+            console.log('Evento III');
+        }
+        
+    </script>
+</head>
+<body onresize="acao1()" onscroll="acao2()">
+
+    <h1> Formulários </h1>
+
+    <input onfocus="acao1()" type="text">
+    <br>
+    <br>
+    <input onblur="acao2()" type="text" style="background-color: mediumaquamarine;">
+    <br>
+    <br>
+    <select onchange="acao3()" name="" id="">
+        <option> --Selecione --</option>
+        <option value="1">Primeiro</option>
+        <option value="2">Segundo</option>
+    </select>
+
+    
+</body>
+</html>
