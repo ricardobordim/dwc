@@ -7,17 +7,19 @@
     <script>
         //3 Escopos = Global, função e bloco;
 
-        //escopo de bloco
+        //escopo de bloco as variáveis sofrem elevação
         var serie= "Friends";
         if (true){
             var serie2 = "game of thrones"
             document.write(serie);
         }
+        // Ocorre um hoisting - elavação do escopo de bloco 
         document.write('<br>');
         document.write('Serie 2a =  ' + serie2);
         document.write('<br>');
 
 
+     
         function x(){
             var serie3 = 'The Walking Dead';
             document.write(serie);

@@ -39,11 +39,14 @@
 
         //Ordena Numerico
 
-        // Função padrão para ordenação numérica, com passagem por referência e não por parâmetro
+        // Função padrão para ordenação numérica, com passagem por referência e não por parâmetro.  Repare que é callback - sem parâmetros
         console.log(lista_numeros.sort(ordenaNumero));
 
         function ordenaNumero(a,b) {
             return a-b;
+            // < 0 = a ordenado ante de b
+            // > 0=b ordenado antes de a
+            //==a ordem é mantida
             
         }
 

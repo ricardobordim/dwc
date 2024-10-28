@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <script>
+
+        // função de callback = são funções encaminhadas como parâmetro para outras funções
+        // uso principal em processamento assíncrono.
+
+        // Reparar que estou encaminhando a função (referência) e não o valor
         function exibirArtigo(id, callbackSucesso, callbackErro){
+
+        // Se fosse para executar a função seria assim:
+        // function exibirArtigo(id, callbackSucesso(), callbackErro()){
+        
             if(id){
                 callbackSucesso('Funções de Sucesso em JS', 'Funções são muito utilizadas');
             }else {
