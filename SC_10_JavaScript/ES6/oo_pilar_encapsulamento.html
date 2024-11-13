@@ -17,7 +17,7 @@
 
             set canalAtivo(canal){
                 if(this._relacaoCanais.indexOf(canal) !==-1){
-                    console.log(canal);
+                    this._canalAtivo = canal
                 };
             }
         }
@@ -26,6 +26,8 @@
 
         //A convenção nao encoraja fazer isso e sim usar o Setters
         // tv._canalAtivo = 8;
+
+        console.log(tv.canalAtivo);
 
         //O código abaixo é considerado o correto e próprio javascript que confere
         // se estou atribuindo valor vai para o set e senão vai para o get

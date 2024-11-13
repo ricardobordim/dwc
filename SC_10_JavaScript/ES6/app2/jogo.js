@@ -4,6 +4,7 @@ var vidas =1;
 var tempo = 10;
 var criaMosquitoTempo = 1500;
 
+// A propriedade search recupera a query string com o ponto de interrogação.
 var nivel=window.location.search;
 nivel = nivel.replace('?','');
 
@@ -16,7 +17,7 @@ if (nivel==='normal'){
 }
 
 
-
+// Para limitar o tamanho da janela, devido ao redimensionamento
 function ajustaTamanhoPalcoJogo()
 {
     altura = window.innerHeight;
@@ -58,6 +59,7 @@ function posicaoRandomica(){
     var posicaox = Math.floor(Math.random() * largura) -90;
     var posicaoy = Math.floor(Math.random() * altura) -90;
 
+    // Retirando a possibilidade de posições relativas.
     posicaox = posicaox < 0 ? 0 : posicaox;
     posicaoy = posicaoy < 0 ? 0 : posicaoy;
 
@@ -68,6 +70,7 @@ function posicaoRandomica(){
     // Criar o elemento html
     
     var mosquito = document.createElement('img');
+    // acessando os atributos do elemento
     mosquito.src = 'imagens/mosca.png';
     mosquito.className = tamanhoAleatorio() +' '+ ladoAleatorio();
     mosquito.style.left=posicaox+'px';
