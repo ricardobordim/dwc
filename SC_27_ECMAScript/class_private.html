@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private</title>
+</head>
+<body>
+    <script>
+        class Pessoa{
+
+            // atributo privado começa com hash
+            #humor = null
+            #mensagens = [
+                'Seja Feliz',
+                'Famoso Marques Holandes'
+            ]
+            constructor(nome){
+                this.#mudarHumor()
+                this.nome = nome;
+            }
+            dizerOi(){
+                return `Olá, meu nome é ${this.nome}`
+            }
+            getHumor(){
+                return this.#humor
+            }
+            getMensagem(){
+                return this.#mensagens[this.#humor]
+            }
+
+            #mudarHumor(){
+                //0 e 1
+                this.#humor = Math.floor(Math.random() * 2)
+            }
+        }
+        let p = new Pessoa('José');
+        console.log(p.dizerOi())
+
+        console.log(p.getHumor());
+
+        console.log(p.getMensagem())
+    </script>
+    
+</body>
+</html>

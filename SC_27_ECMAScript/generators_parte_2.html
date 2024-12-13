@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+
+<body>
+    <div id="teste">
+        <script>
+            /* o Asterisco transforma em Generator */
+            /* ação fica para o next e o yield*/
+
+            function* conversar(){
+                console.log('teste 1');
+                console.log('teste 2');
+                console.log('teste 3');
+
+                let opcao = yield 'E ai, tudo bem?';
+
+                console.log('teste 4');
+                console.log('teste 5');
+                console.log(opcao);
+                yield 'Ótimo, fico feliz!'
+
+            }
+            let conversa = conversar(); //objeto iterator
+            console.log(conversa);
+            let iteracao = conversa.next();
+            console.log(iteracao);
+
+           iteracao = conversa.next('sim');
+            console.log(iteracao);
+
+        </script>
+    </div>
+
+</body>
+
+</html>

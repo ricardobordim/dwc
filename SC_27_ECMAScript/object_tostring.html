@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To String</title>
+</head>
+<body>
+    <script>
+        class Carro{
+            constructor(marca, modelo, ano){
+                this.marca = marca,
+                this.modelo = modelo,
+                this.ano = ano
+            }
+            // sobrescrevendo métodos
+            toString(){
+            return `Carro da marca ${this.marca}, modelo ${this.modelo}, ano ${this.ano}`
+            }
+        }
+        // object type
+        let carro = new Carro('Jeep','Renegade','2023')
+
+        console.log(carro.toString())
+    </script>
+    
+</body>
+</html>

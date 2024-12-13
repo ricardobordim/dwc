@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promisses</title>
+</head>
+
+<body>
+    <script>
+
+        // passa uma função uma para resolver outra para cancelar
+        let promessa = new Promise((resolve, reject) => {
+            
+            // requisição http fake para recuperar uma relação de usuários
+            // não sei se dará certo: nem o tempo, nem o retorno
+            setTimeout(() => {
+
+                // requisição foi realizada de algum modo
+                let resposta_da_requisicao = {}
+
+                // erro na requisição
+                if(false){
+                    resposta_da_requisicao = {
+                        codigo: 1050,
+                        erro: 'Falha de autorização'
+                    }
+
+                    reject(resposta_da_requisicao);
+                }
+                resposta_da_requisicao = {
+                    0: { id: 1, nome: 'João'},
+                    1: { id: 2, nome: 'José' },
+                    2: { id: 3, nome: 'Maria' }
+                    
+                }
+                resolve(resposta_da_requisicao);
+            }, 4000);
+
+            
+        }).then((dados)=>{
+            console.log('Operação sequencial: ', dados);
+            return 'Parâmetro 1 para o then 2';
+        }).then((param)=>{
+            console.log('Then número 2', param);
+        }).then(() => {
+            console.log('Then número 3');
+        }).then(() => {
+            console.log('Then número 4');
+            return 'Parametro capturado no then anterior';
+        }).catch(erro=>{
+            console.log('Operação sequencial do Catch',erro);
+            return 'Parametro capturado e enviado para o then seguinte'
+        }).then((param) => {
+            console.log('Then número 5',param);
+        }).then(() => {
+            console.log('Then número 6');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -48,6 +48,7 @@ class Bd{
 
         let despesas = Array();
 
+        //recuperar todas as despesas cadastradas
         let id = localStorage.getItem('id');
         for (let i = 1; i <=id; i++){
 
@@ -72,6 +73,7 @@ class Bd{
         console.log(despesasFiltradas);
         console.log(despesa);
         // Aplicar os filtros, lembrando que o Filter não atua sobre o Array Original
+        // despesasFiltradas.filter(function f(){return f.ano !=''})
         
         // Ano
         if (despesa.ano != ''){

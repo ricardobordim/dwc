@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let v1 =10;
+        let v2 = null; //nula significa null ou undefined
+
+        // logical nullish assignment ??, testa se a variável é vazia antes de atribuir
+        v1 ??=50;
+        v2 ??=60;
+
+        console.log(v1);
+        console.log(v2);
+
+        let carro = {
+            marca: 'Volkswagen'
+        }
+
+        carro.marca ??='VW'
+        carro.modelo ??= 'T-Cross'
+        carro.ano ??='2021'
+    
+        console.log(carro)
+
+        let arr = ['uva','joao',null, undefined, 8 ,[]]
+
+        arr.forEach((item,indice)=>{
+            arr[indice] ??= 'Não Informado'
+        })
+
+        console.log(arr)
+    </script>
+    
+</body>
+</html>

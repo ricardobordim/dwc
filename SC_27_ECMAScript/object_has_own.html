@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pessoa{
+            id =null;
+        }
+        class PessoaFisica extends Pessoa{
+            nome = 'Ricardo B';
+        }
+        class PessoaJuridica extends Pessoa{
+            razaoSocial = 'Argus Academy'
+        }
+        const pessoaFisica =new PessoaFisica;
+        const pessoaJuridica = new PessoaJuridica;
+        
+        console.log(pessoaFisica);
+        console.log(pessoaJuridica);
+
+        // Utilizando a feature hasOwn para testar a existência desse recurso no objeto
+
+        console.log(Object.hasOwn(pessoaFisica,'id')); //true
+        console.log(Object.hasOwn(pessoaFisica, 'nome')); //true
+        console.log(Object.hasOwn(pessoaJuridica, 'id')); //true
+        console.log(Object.hasOwn(pessoaJuridica, 'nome')); //false
+
+
+
+    </script>
+</body>
+</html>

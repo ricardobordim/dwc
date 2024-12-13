@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // testando com o OR
+        let teste1 = null || 'Valor a direita';
+        let teste2 = 0 || 'Valor a direita';
+        let teste3 = undefined || 'Valor a direita';
+        let teste4 = '' || 'Valor a direita';
+        let teste5 = false || 'Valor a direita';
+        let teste6 = 'Valor a esquerda' || 'Valor a direita';
+
+        console.log(teste1);
+        console.log(teste2);
+        console.log(teste3);
+        console.log(teste4);
+        console.log(teste5);
+        console.log(teste6);
+        console.log('--------------');
+
+
+
+        // usando o ?? nullish_coalescing_operator
+        teste1 = null ?? 'Valor a direita';
+        teste2 = 0 ?? 'FICOU DIFERENTE';
+        teste3 = undefined ?? 'Valor a direita';
+        teste4 = '' ?? 'FICOU DIFERENTE';
+        teste5 = false ?? 'Valor a direita';
+        teste6 = 'Valor a esquerda' ?? 'Valor a direita';
+
+        console.log(teste1);
+        console.log(teste2);
+        console.log(teste3);
+        console.log(teste4);
+        console.log(teste5);
+        console.log(teste6);
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+git init
+git status
+git add exemplo.txt
+git add .
+git commit -m "Incluindo comandos"
+git push 
+
+----------------------------------------------------------------------------
+git clone //se colocar o endereço e após um espaço e um . não copia o diretório

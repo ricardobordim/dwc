@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weakamp</title>
+</head>
+<body>
+    <script>
+        obj1= {
+            nome: "Jorge S",
+            profissao: "Programador Senior"
+        }
+        obj2={
+            nome:"Maria da Silva",
+            profissao:"CEO"
+        }
+        // WeakMap ->referência e Vazamento de memória
+
+        const objetos = [obj1,obj2]; //Referência
+
+        console.log("Original");
+
+        // lista todo o objetos
+        objetos.map((value,index)=>console.log(index,value));
+
+        // Tanto faz a maneira que vc faz a atribuição
+        // obj2.nome = "João da Silva";
+        objetos[1].nome = "João da Silva";
+
+        //Vazamento de Memória
+        obj2 = null; 
+        // A atribuição abaixo dá erro
+        // obj2.nome = "João da Silva";
+
+        // Essa Funciona, apesar do objeto ter sido apagado
+        objetos[1].nome = "Pedro da Silva";
+        objetos.map((value, index) => console.log(index, value));
+
+        console.log(obj2);
+
+
+    </script>
+    
+</body>
+</html>

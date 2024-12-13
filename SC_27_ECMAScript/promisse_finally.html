@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promisse</title>
+</head>
+<body>
+    <script>
+        let p = new Promise((resolve,reject)=>{
+            
+            if(false){
+                reject('Rejeitada');
+            }
+            resolve('Resolvida');
+        })
+        .then((resultado)=>{
+            console.log(resultado);
+        })
+        .catch((rejeitado)=>{
+            console.log(rejeitado);
+        })
+        .finally(()=>{
+            // tanto faz se for rejeitado ou resolvido
+            console.log('Não recebe parâmetro, pois executa em ambos os casos')
+        })
+        .then(()=>{
+            console.log('Podem existir quantos nós quisermos')
+        })
+    </script>
+</body>
+</html>

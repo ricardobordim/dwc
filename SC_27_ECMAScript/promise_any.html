@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const p1 = new Promise((resolve, reject)=>{
+            setTimeout(() => resolve('P1 Resolvida'), 3000)
+        })
+        const p2 = new Promise((resolve, reject) => {
+                setTimeout(() => resolve('P2 Resolvida'), 2000)
+        })
+        const p3 = new Promise((resolve, reject) => {
+                setTimeout(() => resolve('P3 Resolvida'), 4000)
+        })
+        const p4 = new Promise((resolve, reject) => {
+            setTimeout(() => reject('P4 Não resolvida'), 1000)
+        })
+        let promises = [p1,p2,p3,p4]
+
+        // Trata apenas a promise que resolve primeiro
+        Promise.any(promises)
+            .then((resolvida)=>{
+                console.log(resolvida)
+            })
+            .catch((erro)=>{
+                console.log(erro)
+            })
+    </script>
+    
+</body>
+</html>

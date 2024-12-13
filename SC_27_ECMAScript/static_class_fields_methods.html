@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Agora com o (#) um atributo ou método passa a ser privado.
+    
+    class Filme{
+        // senão fosse estático, começaria em 1 a cada instância
+        static proximoIdFilme = 1;
+
+        constructor(titulo){
+            this.titulo = titulo;
+            this.id = Filme.proximoIdFilme;
+            Filme.proximoIdFilme++;
+        }
+        
+        static getProximoIdFilme(){
+            return Filme.proximoIdFilme;
+        }
+    }
+    console.log(Filme.proximoIdFilme);
+    const filme1 = new Filme('Um dia depois do Outro');
+    const filme2 = new Filme('Um dia depois do Outro');
+
+ 
+    console.log(filme1);
+    console.log(filme2);
+
+    console.log(Filme.getProximoIdFilme());
+
+
+    /*
+        class Funcionario {
+            departamento = 'RH';
+            salario = 5000.50;
+            static #primeiroNome = 'Pedro';
+            static #ultimoNome = 'Silva';
+
+            static #nomeCompleto() {
+                return `${this.#primeiroNome} ${this.#ultimoNome}`;
+            }
+            static showNome() {
+                return this.#nomeCompleto();
+            }
+        }
+        // Daria erro sem o static
+        console.log(Funcionario.showNome());
+    */
+
+    </script>
+    
+</body>
+</html>

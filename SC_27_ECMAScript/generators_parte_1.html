@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    <div id="teste">
+        <script>
+            /* o Asterisco transforma em Generator*/
+            function* testeGenerator(){
+                console.log('Teste 1');
+                // Executa tudo até a linha abaixo
+                yield console.log('Teste 2');
+                yield console.log('Teste 3');
+
+                return 'Teste 4';
+
+            }
+            let meuGenerator = testeGenerator();
+            // Recebe um objeto iterator
+            console.log(meuGenerator);
+
+            // Aqui executa o conteúdo do primeiro bloco
+            meuGenerator.next();
+            console.log('-----');
+
+            // Aqui executa o conteúdo do segundo bloco
+            meuGenerator.next();
+            console.log('-----');
+
+            console.log(meuGenerator.next());
+
+
+
+        </script>
+    </div>
+    
+</body>
+</html>

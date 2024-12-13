@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weakamp</title>
+</head>
+
+<body>
+    <script>
+        obj1 = {
+            nome: "Jorge S",
+            profissao: "Programador Senior"
+        }
+        obj2 = {
+            nome: "Maria da Silva",
+            profissao: "CEO"
+        }
+        //Coleção WeakMap 
+
+        const objetos = new WeakMap();
+
+        objetos.set(obj1,"Informações do objeto 1");
+        objetos.set(obj2,"Informações do objeto 2");
+
+        // Não podemos percorrer esse WeakMap
+
+
+        console.log(objetos);
+
+        // Garbage Collector remove a cada 5 minutos aproximadamente
+        // Quando uma variável é apagada
+        obj1=null;
+
+        console.log(objetos);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

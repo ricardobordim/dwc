@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       let nomes = [
+        'joão, josé, maria',
+        'sandra, paulo',
+        'antonia, fernanda, marcos'
+       ];
+       console.log(nomes);
+       let nomesMap = nomes.map(item =>{
+          return item.split(',')
+       })
+       console.log(nomesMap);
+
+    // profundidade 1    
+       let nomesFlatMap = nomes.flatMap(item => {
+          return item.split(',')
+       })
+
+       console.log(nomesFlatMap);
+
+       let arr = [1,2,3,4];
+       console.log(arr.map(item =>{
+            return item
+       }))
+
+    </script>
+
+</body>
+
+</html>

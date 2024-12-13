@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let objeto = {
+            nome: "Ricado Bordim",
+            profissional: {
+                site: "rb.com.br",
+                profissao: "analista"
+            },
+            hobbies: [
+                { id: 1, hobby: "Fazer trilhas" },
+                { id: 2, hobby: "Dormir" },
+            ],
+            pais: "Brasil"
+        }
+
+        console.log(objeto);
+
+        // convertendo para um array;
+
+        console.log(Object.values(objeto));
+        console.log(Object.entries(objeto));
+
+        // Descritores de Propriedades;
+
+        console.log(Object.getOwnPropertyDescriptors(objeto));
+
+        // descritor writable: false não pode ser modificado;
+        Object.defineProperty(objeto,'nome',{
+            value:'Diogo Bordim',
+            writable:false
+        })
+        console.log(Object.getOwnPropertyDescriptors(objeto));
+
+
+        // descritor enumerable: false não exibe em laço de repetição
+        Object.defineProperty(objeto, 'hobbies', {
+            enumerable: false
+        }) 
+        
+        for (let propriedade in objeto){
+            console.log(propriedade,objeto[propriedade])
+        }
+
+
+        // descritor configurable: false indica que não pode ser deletada, somente muda para false o writable
+        Object.defineProperty(objeto, 'pais', {
+            configurable: false
+        }) 
+        
+        // delete objeto.pais  --no console escrever e dá erro
+    </script>
+
+</body>
+
+</html>

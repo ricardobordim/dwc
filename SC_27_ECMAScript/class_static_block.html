@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Agenda{
+            #titulo = '';
+            eventos = [];
+
+            static config ={};
+            static #eventosRecorrentes = [];
+
+
+
+            constructor(titulo, eventos){
+                console.log('Executando o Construtor');
+                this.#titulo = titulo;
+                this.eventos = eventos;
+            }
+
+            // Bloco estático de classe, executa antes de tudo
+            // São executados na inicialização da classe.
+            static {
+                console.log('Executando um bloco estático');
+            }
+
+            // Se conectam a contexto da classe
+            static {
+                this.config = {
+                    tema: 'Dark',
+                    visualizacao : 'mensal'
+                }
+            }
+            static{
+                this.#eventosRecorrentes.push('Feriado 1');
+                this.#eventosRecorrentes.push('Feriado 2');
+
+            }
+            static get eventosRecorrentes(){
+                return this.#eventosRecorrentes;
+            }
+
+
+
+        }
+        const agenda = new Agenda('Cliente 1' ,['Reunião 1','Reuniao 2'])
+        console.log(agenda)
+        console.log(Agenda.config);
+
+        // Por ser um método get tem a inteligência de acessar como um atributo.
+        console.log(Agenda.eventosRecorrentes);
+
+
+    </script>
+    
+</body>
+</html>

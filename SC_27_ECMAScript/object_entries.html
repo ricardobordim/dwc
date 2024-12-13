@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let objeto = {
+            nome: "Ricado Bordim",
+            profissional: {
+                site: "rb.com.br",
+                profissao: "analista"
+            },
+            hobbies: [
+                { id: 1, hobby: "Fazer trilhas" },
+                { id: 2, hobby: "Dormir" },
+            ],
+            pais: "Brasil"
+        }
+
+        console.log(objeto);
+
+        // convertendo para um array;
+
+        console.log(Object.entries(objeto));
+    </script>
+
+</body>
+
+</html>

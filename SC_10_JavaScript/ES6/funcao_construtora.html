@@ -32,8 +32,29 @@
         carro.acelerar(50);
         console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`);
 
-        
+        class Carro2 {
+            constructor(){
+                this.cor = 'preto'
+            }
+        }
 
+        let Carro3 = {
+            cor : 'azul'
+        }
+
+        let Carro4 = function(){
+            this.cor = 'amarelo';
+        }
+
+     
+    
+        let c2 = new Carro2();
+        console.log(c2.cor)
+
+        console.log(Carro3.cor);
+
+        let c3 = new Carro4();
+        console.log(c3.cor)
 
     </script>
 </head>

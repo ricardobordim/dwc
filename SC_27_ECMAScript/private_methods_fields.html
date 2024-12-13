@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Antigamente era por convenção(_) que um atributo ou método era privado.
+        class Funcionario{
+            departamento = 'RH';
+            salario = 5000.50;
+            _primeiroNome = 'Joao';
+            _ultimoNome = 'Silva';
+
+            _nomeCompleto(){
+                return `${this._primeiroNome} ${ this._ultimoNome }`;
+            }
+        }
+        const funcionario = new Funcionario();
+        console.log(funcionario._nomeCompleto());
+        funcionario._primeiroNome = 'Maria';
+        console.log(funcionario._nomeCompleto());
+
+        // Agora com o (#) um atributo ou método passa a ser privado.
+        class Funcionario2 {
+            departamento = 'RH';
+            salario = 5000.50;
+            #primeiroNome = 'Pedro';
+            #ultimoNome = 'Silva';
+
+            #nomeCompleto() {
+                return `${this.#primeiroNome} ${this.#ultimoNome}`;
+            }
+            showNome(){
+                return this.#nomeCompleto();
+            }
+        }
+        const funcionario2 = new Funcionario2();
+        console.log(funcionario2);
+        console.log(funcionario2.showNome());
+ 
+
+
+
+    </script>
+    
+</body>
+</html>

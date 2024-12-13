@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converte arrays em Objetos</title>
+</head>
+<body>
+    <script>
+        // Em javascript não existem arrays associativos, sendo sempre numéricos
+        // Objetos são sempre chave e javlor
+        let dados = [
+            ['nome','Lorenzo Bordim'],
+            ['profissional',[
+                ['site','jb.com.br'],
+                ['profissao','programador']
+            ]],
+            ['hobies',['caminhar','nadar']],
+            ['pais','Brasil']
+        ]
+        console.log(dados);
+
+        let dados2 = Object.fromEntries(dados);
+        console.log(dados2);
+    </script>
+    
+</body>
+</html>
+

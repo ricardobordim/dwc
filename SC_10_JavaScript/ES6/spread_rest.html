@@ -14,6 +14,9 @@
         console.log(tituloArtigo);
         console.log(...tituloArtigo);
         console.log([...tituloArtigo]);
+        
+        let tituloSpread = [];
+        tituloSpread = [...tituloArtigo]
 
         //arrays
 
@@ -33,7 +36,11 @@
         }
         let clone = {endereco: 'Rua Abc',...pessoa}
 
+        let clone2 = {endereco: "Rua X", nome : pessoa.nome, idade : pessoa.idade}
+
         console.log(clone);
+        console.log(clone2);
+
 
 
 

@@ -5,37 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herança</title>
     <script>
-        class Cachorro{
-            constructor(){
-                this.cor = 'Branco';
-                this.tamanho = 30;
-                this.orelas = 'Grandes e caídas';
-            }
-            correr(){
-                console.log('Correr');
-            }
-            dormir(){
-                console.log('Dormir');
-            }
-            rosnar(){
-                console.log('rosnar');
-            }
-        }
-        class Passaro {
-            constructor() {
-                this.cor = 'Branco';
-                this.tamanho = 30;
-                this.bico = 'Curto';
-            }
-            voar() {
-                console.log('Voar');
-            }
-            dormir() {
-                console.log('Dormir');
-            }
-        }
-        let cachorro = new Cachorro();
-        let passaro = new Passaro();
+        // class Cachorro{
+        //     constructor(){
+        //         this.cor = 'Branco';
+        //         this.tamanho = 30;
+        //         this.orelas = 'Grandes e caídas';
+        //     }
+        //     correr(){
+        //         console.log('Correr');
+        //     }
+        //     dormir(){
+        //         console.log('Dormir');
+        //     }
+        //     rosnar(){
+        //         console.log('rosnar');
+        //     }
+        // }
+        // class Passaro {
+        //     constructor() {
+        //         this.cor = 'Branco';
+        //         this.tamanho = 30;
+        //         this.bico = 'Curto';
+        //     }
+        //     voar() {
+        //         console.log('Voar');
+        //     }
+        //     dormir() {
+        //         console.log('Dormir');
+        //     }
+        // }
+        // let cachorro = new Cachorro();
+        // let passaro = new Passaro();
 
         class Animal {
             constructor() {
@@ -82,13 +82,18 @@
         let ave = new Ave();
         let papagaio = new Papagaio();
         cao.correr();
+        
         ave.voar();
         ave.dormir();
         cao.dormir();
         papagaio.dormir();
         papagaio.falar();
         console.log(cao);
+        cao.cor = 'Cinza';
+        console.log(cao.cor);
+        ave.cor='branco';
         console.log(ave);
+        console.log(ave.cor);
         console.log(papagaio);
 
     </script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includes</title>
+</head>
+<body>
+
+    <script>
+        let arr=['banana','maçã','uva'];
+
+        // existe um determinado elemento
+        let retorno = arr.find(item=> item =='maçã');
+        // find retorna o valor pesquisado ou undefined caso não exista
+
+        console.log(retorno);
+
+        retorno = arr.includes('maçã');
+        // retorno true ou false
+        console.log(retorno);
+
+    </script>
+    
+</body>
+</html>
