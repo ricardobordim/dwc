@@ -26,6 +26,7 @@
                 
                 // console.log(opcao);
                 if (opcao == 'sim'){
+                    // requisição http
                     fetch('dados/piadas.json')
                     .then(resposta=> resposta.json())
                     .then(piadas=>{

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			#divExterna{
+				background-color: #ccc;
+				width: 80px;
+				height: 80px;
+				padding: 70px;
+			}
+			#divInterna{
+				background-color: blue;
+				width: 80px;
+				height: 80px;
+			}
+			.inputFocus{
+				background-color:aqua;
+			}
+			.inputBlur{
+				background-color: gray;
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(()=>{
+				$('#onload').html('Pagina Carregada')
+
+				$(window).scroll(()=>{
+					$('#scroll').html('Scroll Acionado');
+				})
+				$(window).resize(()=>{
+					$('#resize').html('Resize').css('background-color','red');
+				})
+
+
+				// Fazendo Scroll e resize em componentes html
+				
+				// function / arrow function
+				$('#div1').scroll(function(){
+					$(this).css('background-color','green')
+
+				})
+
+				// function / arrow function
+
+				$('#div1').scroll(e=>{
+					// No console vc vê o que pode utilizar
+					// console.log(e);
+					$(e.target).css('background-color','yellow');
+				})
+
+				$('#btn1').mousedown(()=>{
+					$('#div2').css('background-color','green');
+				})
+				$('#btn1').mouseup(() => {
+					$('#div2').css('background-color', 'violet');
+				})
+
+				$('#btn2').dblclick(()=>{
+					$('#div2').css('background-color', 'orange');
+				})
+				$('#div2').mousemove((e)=>{
+					// console.log(e);
+					// console.log(e.offsetX, e.offsetY);
+
+					$('#resultadoDiv').html('X: ' + e.offsetX + ' / Y: ' + e.offsetY )
+				})
+
+				// mouseenter, mouseleave, mouseover, mouseout
+				// Esses eventos se comportam diferentes dentro da hierarquia html
+				// mouseover e mouseout são métodos antigos
+
+				// Para testar o erro , efeito bubble somente pelo console
+				// Por entrar em um filho, o pai também precisa ser acionado.
+				$('#divExterna').mouseover(()=>{
+					$('#resultadoDiv1').html('entrouOver');
+					console.log('Div Externa (entrou)')
+				})
+
+				$('#divExterna').mouseenter(() => {
+					$('#resultadoDiv1').html('entrouEnter');
+				})
+				$('#divExterna').mouseout(() => {
+					$('#resultadoDiv1').html('saiuOut');
+					console.log('Div Externa (saiu)')
+				})
+				$('#divExterna').mouseleave(() => {
+					$('#resultadoDiv1').html('saiuLeave');
+				})
+
+				$('#divInterna').mouseover(() => {
+					$('#resultadoDiv2').html('entrouOver');
+					console.log('Div Interna (entrou)')
+				})
+
+				$('#divInterna').mouseenter(() => {
+					$('#resultadoDiv2').html('entrouEnter');
+				})
+				$('#divInterna').mouseout(() => {
+					$('#resultadoDiv2').html('saiuOut');
+					console.log('Div Interna (saiu)')
+				})
+				$('#divInterna').mouseleave(() => {
+					$('#resultadoDiv2').html('saiuLeave');
+				})
+
+				$('#teclado').keydown(()=>{
+					$('#resultadoTecla').html('Tecla pressionada')
+				})
+				$('#teclado').keyup((e) => {
+					$('#resultadoTecla').html('Tecla liberada')
+					console.log(e.keyCode);
+					if (e.keyCode ==13) {
+						let txt = $(e.target).val();
+						$('#resultadoTecla').html(txt);
+						$(e.target).val('');
+					}
+				})
+				$('#nome, #email').focus((e)=>{
+					console.log('Recebeu o Foco')
+					$(e.target).addClass('inputFocus');
+				})
+
+				// Perde o foco
+				$('#nome, #email').blur((e) => {
+					console.log('Perdeu o Foco')
+					$(e.target).removeClass('inputFocus');
+				})
+
+				$('#opcao').change((e) => {
+					console.log('Opção Modificada')
+					console.log($(e.target).val())
+				})
+
+				$('form').submit((e)=>{
+					// Não fez o refresh da página.
+					e.preventDefault();
+					console.log('Formulário enviado')
+				})
+
+				$('a').click(e=>{
+					// desabilita o padrão.
+					e.preventDefault();
+				})
+
+			})
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div id="topo">
+			<h1>Eventos</h1>
+		</div>
+
+		<div>
+			<h3>Browser</h3>
+			<span>Onload: </span><span id="onload">?</span><br />
+			<span>Scroll: </span><span id="scroll">?</span><br />
+			<span>Resize Window: </span><span id="resize">?</span>
+			<div id="div1" style="height: 100px; width: 100px; border: solid 1px; overflow-y:scroll">
+				<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+				
+			</div>
+			<hr />
+
+			<h3>Mouse</h3>
+			<button id="btn1" type="button">Clique aqui</button>
+			<button id="btn2" type="button">Clique aqui 2x</button>
+			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+			<span>Resultado do evento sobre a div</span> <span id="resultadoDiv"></span>
+			<div id="divExterna">
+				<div id="divInterna"></div>
+			</div>
+			<span>Div Externa: </span> <span id="resultadoDiv1"> </span>
+			<span>Div Interna: </span> <span id="resultadoDiv2"> </span>
+
+
+
+
+			<hr />
+
+			<h3>Teclado</h3>
+			<span>Nome:</span>
+			<input id="teclado" type="text" />
+			<span id="resultadoTecla">Resultado do evento sobre o input</span>
+			<hr />
+
+			<h3>Formulário</h3>
+			<form>
+				<span>Nome:</span>
+				<input id="nome" type="text" />
+
+				<span>E-mail:</span>
+				<input id="email" type="text" />
+
+				<span>Motivo do contato:</span>
+				<select id="opcao">
+					<option value="">-- Selecione --</option>
+					<option value="duvida">Dúvida</option>
+					<option value="sugestao">Sugestão</option>
+				</select>
+				
+				<button type="submit">Enviar</button>
+			</form>
+			<br>
+			<a href="http://www.google.com.br">google</a>
+		</div>
+	</body>
+
+</html>

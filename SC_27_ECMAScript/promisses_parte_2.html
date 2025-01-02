@@ -38,9 +38,10 @@
                 resolve(resposta_da_requisicao);
             }, 4000);
 
-            
+        // poderia dar qualquer nome para esse parametro, aqui foi dados
         }).then((dados)=>{
             console.log('Operação sequencial: ', dados);
+            // o return passa parâmetro par ao then seguinte
             return 'Parâmetro 1 para o then 2';
         }).then((param)=>{
             console.log('Then número 2', param);

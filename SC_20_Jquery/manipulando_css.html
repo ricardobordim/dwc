@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			.campo {
+				background-color: #ddd;
+				border: 1px solid red;
+				padding: 10px;
+			}
+			.padrao{
+				background-color: aquamarine;
+			}
+
+			.erro{
+				background-color: red;
+			}
+
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+
+			$(document).ready(() => {
+				// Dois parâmetros atributo e o valor
+				console.log($('#topo').css('background-color','green'))
+				console.log($('#topo').css('margin', '50px 50px 100px 100px'))
+				// $('#topo').css('background-color','blue').css('padding', '50px 50px 100px 100px')
+
+				// Usando a passagem por objeto literal
+				console.log($('#topo').css({'margin': '50px 50px 100px 100px', 'padding': '50px 50px 100px 100px'}))
+
+				console.log($('input').addClass('campo'));
+				console.log($('textarea').addClass('campo'));
+
+				console.log($('input').addClass('campo padrao'));
+
+				console.log($('textarea').addClass('campo erro'));
+
+				// Pegando o retorno true ou false
+				// Removendo a classe
+
+				if ($('textarea').hasClass('erro')) {
+					alert('Temos um campo com erro');
+					$('textarea').removeClass('erro');
+				};
+
+
+
+			})
+
+			// Para trabalhar com classes a primeira coisa é ter o style
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div id="topo">
+			<h1>Barra de navegação da aplicação</h1>
+		</div>
+
+		<div>
+			<h3>Contato</h3>
+			<hr />
+
+			<p>Nome:</p>
+			<input type="text" />
+			<br />
+
+			<p>Email:</p>
+			<input type="text" />
+			<br />
+
+			<p>Mensagem:</p>
+			<textarea></textarea>
+			<br />
+
+			<button type="button">Enviar</button>
+		</div>
+	</body>
+
+</html>

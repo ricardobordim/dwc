@@ -16,16 +16,18 @@
             }, 3000);
         });
 
-        // o async vira um promisse
+        // o async vira um promisse, essa função poderá aguardar por processamento assincrono usando o await abaixo
         async function recuperarDados(){
 
             // Aguarda esse processamento abaixo
             await processoAssincrono.then(p=> console.log(p));
 
             console.log('Processamento Assincrono 1');
+            
+            // o método fetch faz um requisição http, no caso com uma API fake, gerando uma Promise
 
             await fetch('https://jsonplaceholder.typicode.com/comments')
-            .then(r => r.json())
+            .then(r => r.json()) //converte para Json
             .then(d=>console.log('Comentários',d));
             console.log('Processamento Assincrono 2');
 

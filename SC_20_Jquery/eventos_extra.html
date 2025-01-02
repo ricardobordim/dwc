@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        #div1{
+            width: 80px;
+            height: 80px;
+            border: 1px solid red;
+        }
+        .destaque {
+            background-color: aqua;
+        }
+ 
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+
+        //evento trigger / hover / toogleClass
+        $(document).ready(() => {
+
+            $('#btn2').on('click',()=>{
+                alert('Botão2')
+            })
+
+            $('#btn1').on('click', () => {
+                $('#btn2').trigger('click');
+            })
+
+            // Pode ser Uma ou Duas funções
+            /*
+            $('#div1').hover(
+            e=>$(e.target).addClass('destaque'),
+            e=>$(e.target).removeClass('destaque')
+            )
+            */
+
+            $('#div1').hover(
+                e => $(e.target).toggleClass('destaque')
+            )
+        })
+    </script>
+</head>
+
+<body>
+   <button  id="btn1" type="button">Botão 1</button>
+    <button id="btn2" type="button">Botão 2</button>
+    <hr>
+    <div id="div1"></div>
+
+
+
+</body>
+
+</html>

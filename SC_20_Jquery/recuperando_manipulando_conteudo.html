@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+
+			$(document).ready(() => {
+				
+
+				console.log('conteúdo div 1: ', $('#div1').html())
+
+				// Alterando o conteúdo interno
+				console.log('conteúdo div 2: ', $('#div2').html('<strong style="color:red">Novo Atributo</strong>'))
+
+				// Alterando o texto
+				console.log('conteúdo div 2: ', $('#div3').text('<strong style="color:red">Novo Atributo</strong>'))
+			})
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div id="div1" style="border:solid 1px #000; width: 150px; height: 150px">
+			<a href="#">teste</a>
+			<p>Esse é outro teste</p>
+			Texto
+			<div>Outro teste</div>
+		</div>
+
+		<div id="div2" style="border:solid 1px #000; width: 150px; height: 150px">
+			Div 2
+		</div>
+
+		<div id="div3" style="border:solid 1px #000; width: 150px; height: 150px">
+			Div 3
+		</div>
+
+	</body>
+
+</html>
