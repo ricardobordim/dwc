@@ -13,9 +13,11 @@
 		<div id="exemplo">Teste</div>
 
 		<!-- 
-		   JS Puro onload="funcao()" ou window.onload= fucntion(){...}
+			Executa somente quando o DOM estiver totalmente carregado.
 
-		   JQuery $(document).ready(function(){..}) ou $(fucntion(){...})
+		   JS Puro body onload="funcao()" ou window.onload= fucntion(){...}
+
+		   JQuery $(document).ready(function(){..}) ou $(function(){...})
 		-->
 
 		<!-- Pela execução ser gravitacional, não funciona -->
@@ -44,6 +46,12 @@
 			// Passada a função como parâmetro
 			$(tt3);
 
+		</script>
+		<script>
+			// Encaminhando uma função anônima, com a chamada de uma função de callback.
+			$(function(){
+				console.log($('#exemplo2'))
+			})
 		</script>
 
 

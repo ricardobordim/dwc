@@ -11,7 +11,7 @@
 
 			$(document).ready(() => {
 				
-				// Não funciona por aqui, somente através de eventos, então
+				// Não funciona por aqui pois não estão definidos os values, somente através de eventos, então
 				// utilizar no console.
 				console.log($('#nome').val())
 
@@ -19,13 +19,14 @@
 				console.log($('#nome').val('Ricardo'));
 
 
-				// Para saber qual foi chegado, retornando todos
+				// Para saber qual foi checked, retornando todos
 				$('.sexo:checked');
 
-				// Retorna somente o primeiro valor do chegad
+				// Retorna somente o primeiro valor do check
 				$('.sexo:checked').val();
 
 
+				// Retorna um array e precisa fazer um laço de repetição para percorrer todo o array
 				$.each($('.interesse:checked'), (indice, valor) => {
 					console.log(indice, valor.value)
 				})

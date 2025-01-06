@@ -20,13 +20,14 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
 
-        //evento trigger / hover / toogleClass
+        //evento trigger / hover / toggleClass
         $(document).ready(() => {
 
             $('#btn2').on('click',()=>{
                 alert('Botão2')
             })
 
+            // No evento de click do botão 1, dispara o evento de click do botão 2
             $('#btn1').on('click', () => {
                 $('#btn2').trigger('click');
             })
@@ -39,6 +40,7 @@
             )
             */
 
+            // Mesmo efeito que adicionar e remover a classe, alternando.  Vide exemplo acima.
             $('#div1').hover(
                 e => $(e.target).toggleClass('destaque')
             )

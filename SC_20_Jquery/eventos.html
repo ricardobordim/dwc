@@ -33,19 +33,19 @@
 					$('#scroll').html('Scroll Acionado');
 				})
 				$(window).resize(()=>{
-					$('#resize').html('Resize').css('background-color','red');
+					$('#resize').html('Página Redimensionada').css('background-color','red');
 				})
 
 
 				// Fazendo Scroll e resize em componentes html
 				
-				// function / arrow function
+				// function usando o this
 				$('#div1').scroll(function(){
 					$(this).css('background-color','green')
 
 				})
 
-				// function / arrow function
+				// Arrow function usando o evento e o alvo desse evento (elemento)
 
 				$('#div1').scroll(e=>{
 					// No console vc vê o que pode utilizar
