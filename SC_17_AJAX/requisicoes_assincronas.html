@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Requisições Assíncronas</title>
+
+    <!-- bootstrap - link cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script>
+        function requisitarPagina(url) {
+
+            // remove qualquer filho criado dinamicamente
+            document.getElementById('conteudo').innerHTML='';
+            if (!document.getElementById('loading')){
+
+                let imgloading = document.createElement('img');
+                imgloading.id = 'loading';
+                imgloading.src='loading.gif';
+                imgloading.className = 'rounded mx-auto d-block';
+    
+                document.getElementById('conteudo').appendChild(imgloading);
+            }
+
+            let ajax = new XMLHttpRequest();
+
+            // listar os atributos
+
+            console.log(ajax);
+
+
+            // requisição não iniciada, state =0
+            console.log(ajax.readyState);
+            
+            // estabelecer conexão com o servidor, state =1
+            ajax.open('GET',url);
+            console.log(ajax.readyState);
+
+            // Os demais estados são modificados pelo servidor
+            // precisamos de alguma lógica para ouvir o servidor
+            ajax.onreadystatechange = ()=> {
+                // console.log(ajax.readyState);
+                if (ajax.readyState==4 && ajax.status==200){
+
+                    document.getElementById('conteudo').innerHTML = ajax.responseText;
+                    console.log('requisição finalizada com sucesso');
+                    // document.getElementById('loading').remove();
+                }
+                if(ajax.readyState == 4 && ajax.status == 404){
+                    document.getElementById('conteudo').innerHTML = 'O status da requisição é 404';
+
+                    // console.log('Requisição solicitada, mas o status é ', ajax.status);
+                }
+            };
+
+            // Na prática utilizamos geralmente o state = 4,
+            // Não significa sucesso e sim que o servidor respondeu
+            // podendo inclusive dizer que não foi encontrado o recurso
+            // por isso estado e status são diferentes.
+            
+            
+            ajax.send();
+            // console.log(ajax);
+        }   
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-light bg-light mb-4">
+        <div class="container">
+            <div class="navbar-brand mb-0 h1">
+                <h3>Requisições síncronas e assíncronas</h3>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="row mb-2">
+            <div class="col-md-4 center"></div>
+            <div class="col-md-4 center">
+                <a onclick="requisitarPagina('pagina_1_conteudo.html')" href="#" class="btn btn-primary">Página 1</a>
+                <a onclick="requisitarPagina('pagina_5_conteudo.html')"  href="#" class="btn btn-primary">Página 2</a>
+                <a onclick="requisitarPagina('pagina_3_conteudo.html')" class="btn btn-primary">Página 3</a>
+            </div>
+            <div class="col-md-4 center"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10" id="conteudo">
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
