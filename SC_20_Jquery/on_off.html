@@ -31,7 +31,7 @@
             */
 
             // Estou incluindo após as ações acima e não teriam efeito então 
-            // chamo a maior hierarquia do formulário
+            // chamo a maior hierarquia do formulário, sendo especificado o elemento.  No caso o input
 
             $('body').on('focus','input', e => {
                 $(e.target).removeClass('desfocado')
