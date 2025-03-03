@@ -1,0 +1,1 @@
+Lembre de colocar esse arquivo em um local que não tenha acesso pelo XAMP

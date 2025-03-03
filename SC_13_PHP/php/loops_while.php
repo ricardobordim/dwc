@@ -13,7 +13,7 @@
             if ($num >8){
                 break;
             }else {
-                // lembrar que o continue volta para o início, pulnado o restante dos comandos abaixo.
+                // lembrar que o continue volta para o início, pulando o restante dos comandos abaixo.
                 continue;
             }
         }
